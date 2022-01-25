@@ -9,8 +9,7 @@ public class OurGroup {
         groupMembers.add("Thanakorn Kuankure");
         groupMembers.add("Chusana Wilaivanichwong");
         groupMembers.add("Yutthana Piyawongwatthana");
-        groupMembers.add("Worakit Ingrungruengluet");
-        //PUT YOUR NAME HERE
+        groupMembers.add("Worakit Ingrungruengluet");//PUT YOUR NAME HERE
     }
     public Vector<String> getGroupMembers () {
         return groupMembers;
