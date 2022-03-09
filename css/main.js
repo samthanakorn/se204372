@@ -88,12 +88,12 @@ function scrollActive(){
     }
     })
 }
-window.addEnvetListener('scroll', scrollActive)
+window.addEventListener('scroll', scrollActive)
 
 /*=============== LIGHT DARK THEME =================*/
 const themeButton = document.getElementById('theme-button')
 const lightTheme = 'light-theme'
-const iconTheme = 'bx-sun'
+const iconTheme = 'bx bx-sun'
 
 //Previously selected topic (if user selected)
 const selectedTheme = localStorage.getItem('selected-theme')
