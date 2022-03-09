@@ -9,7 +9,7 @@ window.addEventListener('scroll', scrollHeader)
 /*============== SERVICES MOAL ===============*/
 const modalViews = document.querySelectorAll('.services__modal'),
       modalBtns = document.querySelectorAll('.services__button'),
-      modalClose = document.querySelectorAll(',services__modal-close')
+      modalClose = document.querySelectorAll('.services__modal-close')
 
 let modal = function(modalClick){
     modalViews[modalClick].classList.add('active-modal')
@@ -42,7 +42,7 @@ let mixerPortfolio = mixitup('.work__container', {
 /* Link active work*/
 const linkWork = document.querySelectorAll('.work__item')
 
-function active(){
+function activeWork(){
     linkWork.forEach(l=> l.classList.remove('active-work'))
     this.classsList.add('active-work')
 }
@@ -88,12 +88,12 @@ function scrollActive(){
     }
     })
 }
-window.addEnvetListener('scroll', scrollActive)
+window.addEventListener('scroll', scrollActive)
 
 /*=============== LIGHT DARK THEME =================*/
 const themeButton = document.getElementById('theme-button')
 const lightTheme = 'light-theme'
-const iconTheme = 'bx-sun'
+const iconTheme = 'bx bx-sun'
 
 //Previously selected topic (if user selected)
 const selectedTheme = localStorage.getItem('selected-theme')
