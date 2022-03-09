@@ -13,13 +13,13 @@
         Pink: hsl(356, 66%, 75%)
         Teal: hsl(174, 63%, 62%)
   */
-  --first-hue: 207;
-  --sat: 90%;
+  --first-hue: 356;
+  --sat: 66%;
   --lig: 75%;
   --second-hue: 219;
 
   --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
-  --first-color-alt: hsl(var(--first-hue), var(--sat), 68%); /* -4% */
+  --first-color-alt: hsl(var(--first-hue), var(--sat), 71%); /* -4% */
   --title-color: hsl(var(--second-hue), 15%, 95%);
   --text-color: hsl(var(--second-hue), 8%, 75%);
   --text-color-light: hsl(var(--second-hue), 4%, 55%);
@@ -247,7 +247,7 @@ transition: .4s; /* for light mode animation */
 
 .nav__logo{
   color: var(--first-color);
-  font-weight:(--font-medium);
+  font-weight: var(--font-medium);
   transition: .4s;
 }
 
@@ -276,6 +276,7 @@ transition: .4s; /* for light mode animation */
 .nav__link{
   color: var(--text-color);
   font-size: 1.25rem;
+  padding: .4rem;
   display: flex;
   border-radius: 5rem;
 }
@@ -285,7 +286,6 @@ transition: .4s; /* for light mode animation */
   background: linear-gradient(180deg,
               hsla(var(--first-hue), var(--sat), var(--lig), .1),
               hsla(var(--first-hue), var(--sat), var(--lig), .2)
-
               );
   box-shadow: 0 0 16px hsla(var(--first-hue), var(--sat), var(--lig), .4);
   color: var(--title-color);

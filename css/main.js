@@ -9,7 +9,7 @@ window.addEventListener('scroll', scrollHeader)
 /*============== SERVICES MOAL ===============*/
 const modalViews = document.querySelectorAll('.services__modal'),
       modalBtns = document.querySelectorAll('.services__button'),
-      modalClose = document.querySelectorAll(',services__modal-close')
+      modalClose = document.querySelectorAll('.services__modal-close')
 
 let modal = function(modalClick){
     modalViews[modalClick].classList.add('active-modal')
@@ -43,7 +43,7 @@ let mixerPortfolio = mixitup('.work__container', {
 const linkWork = document.querySelectorAll('.work__item')
 
 function active(){
-    linkWork.forEach(l=> l.classList.remove('active-work'))
+    linkWork.forEach(L=> l.classList.remove('active-work'))
     this.classsList.add('active-work')
 }
 
