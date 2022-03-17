@@ -1,3 +1,30 @@
+<style>
+    .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: hsl(6, 100%, 85%);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+.dropdown-content a:hover {
+    background-color: #ffcf76
+}
+.dropdown-content a:link,
+.dropdown-content a:visited {
+    color: white;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+
 <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -16,7 +43,13 @@
             <nav class="nav container">
                 <a href="#" class="nav__logo">FindW</a>
 
-                <div class="text__header">Company</div>
+                <div class="text__header dropdown">
+                    <span>Company</span>
+                    <div class="dropdown-content">
+                        <a href="#">Login</a><br>
+                        <a href="/css/index.html">Logout</a>
+                    </div>
+                </div>
             </nav>
         </header>
 
