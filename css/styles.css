@@ -318,8 +318,7 @@ transition: .4s; /* for light mode animation */
   text-align: center;
 }
 
-.home__greeting,
-.home__education{
+.home__greeting{
   font-size: var(--small-font-size);
   font-weight: var(--font-medium);
 }
@@ -331,8 +330,10 @@ transition: .4s; /* for light mode animation */
 }
 
 .home__education{
-  color: var(--text-color);
+  margin-top: 1rem;
+  color: var(--title-color);
   margin-bottom: 2.5rem;
+  font-size: 20px;
 }
 
 .home__name{
@@ -582,7 +583,7 @@ transition: .4s; /* for light mode animation */
 .services__modal{
   position: fixed;
   inset: 0;
-  background-color: hsla(var(--secound-hue), 28%, 16%, .7);
+  background-color: hsla(0, 0%, 0%, .45);
   padding: 2rem 1rem;
   display: grid;
   place-items: center;
@@ -594,9 +595,13 @@ transition: .4s; /* for light mode animation */
 
 .services__modal-content{
   position: relative;
-  background-color: var(--body-color);
-  padding: 4.5rem 1.5rem 2.5rem;
-  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--first-color);
+  padding: 1.5rem 1.5rem 1.5rem;
+  border-radius: 1rem;
 }
 
 .services__modal-title,
@@ -637,10 +642,10 @@ transition: .4s; /* for light mode animation */
 
 .services__modal-close{
   position: absolute;
-  top: 2.5rem;
-  right: 2.5rem;
-  font-size: 1.5rem;
-  color: var(--first-color);
+  top: 1.5rem;
+  right: 2rem;
+  font-size: 2.5rem;
+  color: white;
   cursor: pointer;
 }
 
@@ -1012,7 +1017,7 @@ margin-bottom: 2rem;
   }
   .services__modal-content{
     width: 500px;
-    padding: 4.5rem 2.5rem 2.5rem;
+    padding: 3rem 2.5rem 5rem;
   }
   .services__modal-description{
     padding: 0 3.5rem;
@@ -1150,3 +1155,77 @@ margin-bottom: 2rem;
   }
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: hsl(6, 100%, 85%);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+.dropdown-content a:link,
+.dropdown-content a:visited {
+    color: white;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+input[type="text"],input[type="password"]{
+	margin-top: 10px;
+	height: 45px;
+	width: 360px;
+  border: #fff;
+  border-radius: 8px;
+	font-size: 18px;
+	margin-bottom: 20px;
+  padding-left: 20px;
+  font-family: var(--body-font);
+}
+
+.btn-login{
+  height: 40px;
+  margin-top: 20px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+	border: none;
+  border-radius: 8px;
+	background-color: white;
+	color: var(--first-color);
+  font-weight: bold;
+  font-family: var(--body-font);
+}
+
+.textLogin{
+  font-family: var(--body-font);
+}
+
+.textLoginTitle{
+  font-family: var(--body-font);
+  font-size: 28px;
+  font-weight: var(--font-medium);
+}
+
+.subtextLoginTitle{
+  font-family: var(--body-font);
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.line__title{
+  width: 10%;
+  height: 1.75px;
+  margin: auto;
+  background-color: var(--title-color);
+  margin-top: 16px;
+  margin-bottom: 2rem;
+}

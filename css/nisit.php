@@ -5,17 +5,17 @@
      <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
     <!--================= FAVICON =================-->
-    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
 
     <!--================= BOXICONS ==================-->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
     <!--================= SWIPER CSS ================-->
-    <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="swiper-bundle.min.css">
 
     <!--=================CSS=============-->
     <!--<link rel="stylesheet" href="">-->
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="styles.css">
 
     <title> Online Internship Management Systems </title>
 </head>
@@ -59,8 +59,15 @@
                 </ul>
             </div>
 
-            <!-- Theme change button -->
-            <i class='bx bx-moon change-theme' id="theme-button"></i>
+            <!-- Theme change button
+            <i class='bx bx-moon change-theme' id="theme-button"></i>-->
+            <div class="text__header dropdown">
+                <span>Student</span>
+                <div class="dropdown-content">
+                    <a href="#">Edit Profile</a><br>
+                    <a href="../index.php">Logout</a>
+                </div>
+            </div>
         </nav>
     </header>
  
@@ -73,18 +80,13 @@
                         <span class="home__greeting">Hello, This is</span>
                         <h1 class="home__name">Online internship</h1>
                         <h1 class="home__name"> management system</h1>
-                        <!--<h3 class="home__education">Frontend Developer</h3>-->
+                        <div class="line__title"></div>
+                        <h3 class="home__education">Welcome [Name]</h3>
 
-                        <div class="home__buttons">
-                            <a href="/css/guest.html" class="button button--ghost">
-                                Guest
-                            </a>
-                            <a class="button">Login</a>
-                        </div>
                     </div>
                    
                     <div class="home__handle">
-                        <img src="/img/home.png" alt="" class="home__img">
+                        <img src="../img/home.png" alt="" class="home__img">
                     </div>
 
                     <div class="home__social">
@@ -112,7 +114,7 @@
                 <h2 class="section__title">About Me</h2>
 
                 <div class="about__container container grid">
-                    <img src="/img/about.jpg" alt="" class="about__img">
+                    <img src="../img/about.jpg" alt="" class="about__img">
                   
                     <div class="about__data">
                         <div class="about__info">
@@ -468,7 +470,7 @@
 
             <div class="work__container container grid">
                 <div class="work__card mix web">
-                    <img src="/img/work1.jpg" alt="" class="work__img">
+                    <img src="../img/work1.jpg" alt="" class="work__img">
 
                     <h3 class="work__title">Web design</h3>
 
@@ -478,7 +480,7 @@
                 </div>
 
                 <div class="work__card mix movil">
-                    <img src="/img/work2.jpg" alt="" class="work__img">
+                    <img src="../img/work2.jpg" alt="" class="work__img">
 
                     <h3 class="work__title">App movil</h3>
 
@@ -488,7 +490,7 @@
                 </div>
 
                 <div class="work__card mix design">
-                    <img src="/img/work3.jpg" alt="" class="work__img">
+                    <img src="../img/work3.jpg" alt="" class="work__img">
 
                     <h3 class="work__title">Brand design</h3>
 
@@ -498,7 +500,7 @@
                 </div>
 
                 <div class="work__card mix web">
-                    <img src="/img/work4.jpg" alt="" class="work__img">
+                    <img src="../img/work4.jpg" alt="" class="work__img">
 
                     <h3 class="work__title">Web design</h3>
 
@@ -508,7 +510,7 @@
                 </div>
 
                 <div class="work__card mix movil">
-                    <img src="/img/work5.jpg" alt="" class="work__img">
+                    <img src="../img/work5.jpg" alt="" class="work__img">
 
                     <h3 class="work__title">App movil</h3>
 
@@ -529,7 +531,7 @@
                 <div class="testimonial__container container swiper">
                     <div class="swiper-wrapper">
                         <div class="testimonial__card swiper-slide">
-                            <img src="/img/testimonial1.png" alt="" class="testimonial__img">
+                            <img src="../img/testimonial1.png" alt="" class="testimonial__img">
 
                            <h3 class="testimonial__name">Microsoft</h3>
                            <p class="testimonial__description">
@@ -538,7 +540,7 @@
                         </div>
 
                         <div class="testimonial__card swiper-slide">
-                            <img src="/img/testimonial2.png" alt="" class="testimonial__img">
+                            <img src="../img/testimonial2.png" alt="" class="testimonial__img">
 
                            <h3 class="testimonial__name">Paula Vusy</h3>
                            <p class="testimonial__description">
@@ -548,7 +550,7 @@
                         </div>
 
                         <div class="testimonial__card swiper-slide">
-                            <img src="/img/testimonial3.png" alt="" class="testimonial__img">
+                            <img src="../img/testimonial3.png" alt="" class="testimonial__img">
 
                            <h3 class="testimonial__name">Sara cill</h3>
                            <p class="testimonial__description">
@@ -668,15 +670,15 @@
         </footer>
 
         <!--============== SCROLLREVEAL ==============-->
-        <script src="/js/scrollreveal.min.js"></script>
+        <script src="../js/scrollreveal.min.js"></script>
 
         <!--============== SWIPER JS ==============-->
-        <script src="/js/swiper-bundle.min.js"></script>
+        <script src="../js/swiper-bundle.min.js"></script>
 
         <!--============== MIXITUP FILTER ===========-->
-        <script src="/js/mixitup.min.js"></script>
+        <script src="../js/mixitup.min.js"></script>
 
         <!--============= MAIN JS==================-->
-        <script src="/js/main.js"></script>
+        <script src="../js/main.js"></script>
     </body>
 </html>

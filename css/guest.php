@@ -1,40 +1,42 @@
-<style>
-    .dropdown {
-  position: relative;
-  display: inline-block;
-}
+<?php
+require("../connection_connect.php");
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: hsl(6, 100%, 85%);
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  padding: 12px 16px;
-  z-index: 1;
-}
-.dropdown-content a:hover {
-    background-color: #ffcf76
-}
-.dropdown-content a:link,
-.dropdown-content a:visited {
-    color: white;
-}
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-</style>
+if(isset($_POST['username'])){
+    
+    $uname=$_POST['username'];
+    $password=$_POST['password'];
+    
+    $sql="Select * From Login where username='".$uname."'AND password='".$password."' limit 1";
 
+    $result = $conn->query($sql);
+    $my_row = $result->fetch_assoc();
+    $TypeLogin = $my_row['type'];
+    if(mysqli_num_rows($result) == 1){
+        if($TypeLogin == "nisit")
+            header("Location:nisit.php");
+        else if ($TypeLogin == "teacher")
+            header("Location:teacher.php");
+        else 
+            echo "IN Database Type of Login is not correct word!";
+        exit();
+    }
+    else{
+        echo " You Have Entered Incorrect Password";
+        exit();
+    }
+        
+}
+?>
 <!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-        <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
+        <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
         <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" href="/css/swiper-bundle.min.css">
-        <link rel="stylesheet" href="/css/styles.css">
+        <link rel="stylesheet" href="css/swiper-bundle.min.css">
+        <link rel="stylesheet" href="styles.css">
 
         <title> Online Internship Management Systems </title>
     </head>
@@ -46,8 +48,8 @@
                 <div class="text__header dropdown">
                     <span>Company</span>
                     <div class="dropdown-content">
-                        <a href="#">Login</a><br>
-                        <a href="/css/index.html">Logout</a>
+                        <a href="#" class="loginshow">Login</a><br>
+                        <a href="../index.php">Logout</a>
                     </div>
                 </div>
             </nav>
@@ -70,7 +72,7 @@
                     </div>
                
                     <div class="home__handle">
-                        <img src="/img/home.png" alt="" class="home__img">
+                        <img src="../img/home.png" alt="" class="home__img">
                     </div>
 
                     <div class="home__social">
@@ -155,6 +157,53 @@
                     </span>
                 </div>
             </footer>
+
+                <div class="services__modal">
+                    <div class="services__modal-content">
+                        <p class="textLoginTitle">Login</p>
+                        <p class="subtextLoginTitle">Nontri Account</p>
+                        <div class="line__social"></div>
+                        <i class='bx bx-x services__modal-close' ></i>
+
+                        
+                        <form method="POST" action="#">
+                            <div class="form-input">
+                                <p class="textLogin">บัญชีผู้ใช้เครือข่ายนนทรี</p>
+                                <input type="text" name="username" placeholder="เช่น b63xxxxxxxx หรือ regxxx"/>	
+                            </div>
+                            <div class="form-input">
+                                <p class="textLogin">รหัสผ่าน</p>
+                                <input type="password" name="password" placeholder="รหัสผ่านบัญชีผู้ใช้เครือข่ายนนทรี"/>
+                            </div>
+                            <input type="submit" type="submit" value="SIGN IN" class="btn-login"/>
+                        </form>
+
+                    </div>
+                </div>
+
     </main>
+    <script>
+        const modalViews = document.querySelectorAll('.services__modal'),
+        modalBtns = document.querySelectorAll('.loginshow'),
+        modalClose = document.querySelectorAll('.services__modal-close')
+
+        let modal = function(modalClick){
+            modalViews[modalClick].classList.add('active-modal')
+        }
+
+        modalBtns.forEach((mb, i) =>{
+            mb.addEventListener('click', () =>{
+                modal(i)
+            })
+        })
+
+        modalClose.forEach((mc)=>{
+            mc.addEventListener('click', () =>{
+                modalViews.forEach((mv) =>{
+                    mv.classList.remove('active-modal')
+                })
+            })
+        })
+    </script>
     </body>
 </html>
