@@ -424,13 +424,25 @@ transition: .4s; /* for light mode animation */
 
 /*=============== BUTTONS ===============*/
 .button{
+  width: 120px;
+  text-align: center;
+  cursor: pointer;
   display: inline-block;
   background-color: var(--first-color);
   color: var(--body-color);
-  padding: .75rem 1rem;
+  padding: .5rem 1rem;
   border-radius: .5rem;
   font-weight: var(--font-medium);
   transition: .4s;
+}
+
+.buttonGuest{
+  width: 116px;
+  height: 40px;
+  padding: .4rem 1rem;
+  background-color: transparent;
+  border: 2px solid var(--first-color);
+  color: var(--first-color);
 }
 
 .button:hover{
@@ -438,6 +450,7 @@ transition: .4s; /* for light mode animation */
   color: var(--body-color);
 }
 .button--ghost{
+  width: 260px;
   background-color: transparent;
   border: 2px solid var(--first-color);
   color: var(--first-color);
@@ -933,16 +946,16 @@ margin-bottom: 2rem;
 ::-webkit-scrollbar{
   width: .6rem;
   border-radius: .5rem;
-  background-color: hsl(var(--second-hue), 8%, 38%);
+  background-color: var(--first-color);
 }
 
 ::-webkit-scrollbar-thumb{
-  background-color: hsl(var(--second-hue), 8%, 26%);
+  background-color: hsl(6, 100%, 80%);
   border-radius: .5rem;
 }
 
 ::-webkit-scrollbar-thumb:hover{
-  background-color: hsl(var(--second-hue), 8%, 20%)
+  background-color: hsl(6, 100%, 77%);
 }
 
 /*=============== BREAKPOINTS ===============*/
@@ -985,6 +998,17 @@ margin-bottom: 2rem;
   .work__filters{
     column-gap: .25rem;
   }
+}
+.arrowGone{
+  position: absolute;
+  width: 200px;
+  height: 160px;
+  background-color: var(--first-color);
+  border-radius: 0 200px 200px 0;
+  bottom: 30px;
+  z-index: -1;
+  align-items: center;
+  top: 1070px;
 }
 
 /* For medium devices */
@@ -1091,8 +1115,21 @@ margin-bottom: 2rem;
   .about__container{
     grid-template-columns: repeat(4 ,1fr);
     align-items: center;
-    column-gap: 4rem;
+    display: flex;
+    justify-content: center;
   }
+  .arrowGone{
+    position: absolute;
+    width: 720px;
+    height: 160px;
+    background-color: var(--first-color);
+    border-radius: 30px 200px 200px 30px;
+    bottom: 30px;
+    z-index: -1;
+    align-items: center;
+    top: 1070px;
+  }
+
   .about__img{
     width: 350px;
   }
@@ -1105,6 +1142,11 @@ margin-bottom: 2rem;
   .about__box{
     text-align: center;
     padding: 1rem 1.25rem;
+  }
+  .areabutton{
+    width: 100%;
+    display: flex;
+    justify-content: end;
   }
   .about__description{
     padding: 0 4rem 0 0;

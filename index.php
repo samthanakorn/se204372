@@ -71,7 +71,7 @@ if(isset($_POST['username'])){
                         <h1 class="home__name"> management system</h1>
 
                         <div class="home__buttons">
-                            <a href="css/guest.php" class="button button--ghost">
+                            <a href="css/guest.php" class="button buttonGuest">
                                 Guest
                             </a>
                             <a class="button loginshow">Login</a>

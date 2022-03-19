@@ -99,6 +99,7 @@ if(isset($_POST['username'])){
                 <h2 class="section__title">Fill Out</h2>
 
                 <div class="about__container container grid">
+                    <div class="arrowGone"></div>
                     <div class="about__data">
                         <div class="about__info">
                             <div class="about__box">
@@ -124,8 +125,38 @@ if(isset($_POST['username'])){
                             </div>
                         </div>
 
-                        <div class="button">Next</div>
+                        <div class="areabutton">
+                            <a href="#FormCompany" class="button">Next</a>
+                        </div>
                      </div>
+                </div>
+            </section>
+
+            <section class="contact section" id="FormCompany">
+                <span class="section__subtitle">Fill in Information</span>
+                <h2 class="section__title">About the Company</h2>
+
+                <div class="contact__container container grid">
+                    <div class="contact__content">
+                        <form action="" class="contact__form">
+                            <div class="contact__form-div">
+                                <label for="" class="contact__form-tag">Names</label>
+                                <input type="text" placeholder="Insert your name" class="contact__form-input">
+                            </div>
+
+                            <div class="contact__form-div">
+                                <label for="" class="contact__form-tag">Mail</label>
+                                <input type="email" placeholder="Insert your email" class="contact__form-input">
+                            </div>
+
+                            <div class="contact__form-div contact__form-area">
+                                <label for="" class="contact__form-tag">Project</label>
+                                <textarea name="" id="" cols="30" rows="10" placeholder="Write your project" class="contact__form-input"></textarea>
+                            </div>
+
+                            <button class="button">Send Message</button>
+                        </form>
+                    </div>
                 </div>
             </section>
 
