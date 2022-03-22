@@ -99,7 +99,7 @@
                         </a>
                     </div>
 
-                    <a href="#about" class="home__scroll">
+                    <a href="#Announcements" class="home__scroll">
                         <i class='bx bx-mouse home__scroll-icon' ></i>
                         <span class="home__scroll-name">Scroll Down</span>
 
@@ -193,7 +193,7 @@
             </div>
         </section>
 
-        <section class="testimonial section">
+        <section class="testimonial section" id="Internship">
                 <span class="section__subtitle">Find All</span>
                 <h2 class="section__title">INTERNSHIP</h2>
 
@@ -547,7 +547,7 @@
             <div class="footer__container container">
                 <ul class="footer__list">
                     <li>
-                        <a href="#Home" class="footer__link">Home</a>
+                        <a href="#home" class="footer__link">Home</a>
                     </li>
                     <li>
                         <a href="#Announcements" class="footer__link">Announcements</a>
