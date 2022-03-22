@@ -558,29 +558,32 @@ transition: .4s; /* for light mode animation */
 
 /*=============== SERVICES ===============*/
 .services__container{
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 1.5rem;
   padding-top: 1rem;
 }
 
 .services__card{
   background-color: var(--container-color);
-  padding: 3rem 1.5rem;
+  padding: 1.5rem 1.5rem;
   border-radius: 1rem;
 }
 
 .services__title{
+  color: white;
   font-size: var(--h3-font-size);
   margin-bottom: 2.5rem;
+  text-align: center;
 }
 
 .services__button{
-  color: var(--first-color);
+  color: white;
   font-size: var(--small-font-size);
   display: flex;
   align-items: center;
   column-gap: .25rem;
   cursor: pointer;
+  justify-content: center;
 }
 
 .services__button:hover .services__icon{
@@ -624,7 +627,7 @@ transition: .4s; /* for light mode animation */
 
 .services__modal-title{
   font-size: var(--h3-font-size);
-  color: var(--first-color);
+  color: white;
   margin-bottom: 1rem;
 }
 
@@ -655,13 +658,22 @@ transition: .4s; /* for light mode animation */
 
 .services__modal-close{
   position: absolute;
-  top: 1.5rem;
-  right: 2rem;
+  top: 1rem;
+  right: 1.5rem;
   font-size: 2.5rem;
   color: white;
   cursor: pointer;
 }
-
+.services__inside{
+  font-weight: normal;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.areabutton1{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 /*Active modal*/
 .active-modal{
   opacity: 1;
@@ -739,36 +751,42 @@ work__icon{
   font-size: 18px;
   font-weight: bold;
   margin: auto;
+  padding: 6px;
   margin-bottom: 2rem;
   border-radius: 20px;
 }
 
 .testimonial__card{
-  background-color: var(--container-color);
+  background-color: var(--first-color);
   padding: 1.25rem 1.5rem;
   border-radius: 1.5rem;
   margin-bottom: 3rem;
+  height: 400px;
 }
 
 .testimonial__img{
-  width: 60px;
+  width: 80px;
   border-radius: 3rem;
   margin-bottom: 1rem;
 }
 
 .testimonial__name{
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-medium);
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--container-color);
   margin-bottom: .25rem;
+  text-align: center;
 }
 
 .testimonial__description{
+  color: var(--container-color);
   font-size: var(--small-font-size);
+  text-align: center;
 }
 
 /* Swiper class */
 .swiper-pagination-bullet{
-  background-color: var(--test-color-light);
+  background-color: var(--container-color);
 }
 
 .swiper-pagination-bullet-active{
@@ -1036,12 +1054,12 @@ margin-bottom: 2rem;
   }
 
   .services__container{
-    grid-template-columns: repeat(2, 160px);
+    grid-template-columns: repeat(3, 1fr);
     justify-content: center;
   }
   .services__modal-content{
     width: 500px;
-    padding: 3rem 2.5rem 5rem;
+    padding: 2.5rem 1.5rem 2.5rem;
   }
   .services__modal-description{
     padding: 0 3.5rem;
@@ -1148,6 +1166,11 @@ margin-bottom: 2rem;
     display: flex;
     justify-content: end;
   }
+  .areabutton1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
   .about__description{
     padding: 0 4rem 0 0;
     margin-bottom: 2.5rem;
@@ -1159,11 +1182,11 @@ margin-bottom: 2rem;
   }
 
   .services__container{
-    grid-template-columns: repeat(3, 192px);
+    grid-template-columns: repeat(3, 230px);
     column-gap: 3rem;
   }
   .services__card{
-    padding: 5rem 2rem 1.5rem;
+    padding: 1.5rem 1.5rem 1.5rem;
   }
 
   .work__container{

@@ -12,10 +12,20 @@ if(isset($_POST['username'])){
     $my_row = $result->fetch_assoc();
     $TypeLogin = $my_row['type'];
     if(mysqli_num_rows($result) == 1){
-        if($TypeLogin == "nisit")
-            header("Location:css/nisit.php");
-        else if ($TypeLogin == "teacher")
-            header("Location:css/teacher.php");
+        if($TypeLogin == "nisit"){
+            require_once("models/InformationDetail.php");
+            $Info = InformationDetail::get($uname);
+            require_once('css/nisit.php');
+        }
+        else if ($TypeLogin == "teacher"){
+            require_once("models/InformationDetail.php");
+            require_once("models/Announcement.php");
+            $Info = InformationDetail::get($uname);
+            $AnnouncementlistOne = Announcement::get(0, 1);
+            $AnnouncementlistTwo = Announcement::get(1, 1);
+            $AnnouncementlistThree = Announcement::get(2, 2);
+            require_once('css/teacher.php');
+        }
         else 
             echo "IN Database Type of Login is not correct word!";
         exit();

@@ -5,17 +5,17 @@
      <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
     <!--================= FAVICON =================-->
-    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
 
     <!--================= BOXICONS ==================-->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
     <!--================= SWIPER CSS ================-->
-    <link rel="stylesheet" href="swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
     <!--=================CSS=============-->
     <!--<link rel="stylesheet" href="">-->
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <title> Online Internship Management Systems </title>
 </head>
@@ -670,15 +670,15 @@
         </footer>
 
         <!--============== SCROLLREVEAL ==============-->
-        <script src="../js/scrollreveal.min.js"></script>
+        <script src="js/scrollreveal.min.js"></script>
 
         <!--============== SWIPER JS ==============-->
-        <script src="../js/swiper-bundle.min.js"></script>
+        <script src="js/swiper-bundle.min.js"></script>
 
         <!--============== MIXITUP FILTER ===========-->
-        <script src="../js/mixitup.min.js"></script>
+        <script src="js/mixitup.min.js"></script>
 
         <!--============= MAIN JS==================-->
-        <script src="../js/main.js"></script>
+        <script src="js/main.js"></script>
     </body>
 </html>
