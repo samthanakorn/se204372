@@ -14,12 +14,19 @@ if(isset($_POST['username'])){
     if(mysqli_num_rows($result) == 1){
         if($TypeLogin == "nisit"){
             require_once("models/InformationDetail.php");
+            require_once("models/Announcement.php");
+            require_once("models/Petition.php");
             $Info = InformationDetail::get($uname);
+            $AnnouncementlistOne = Announcement::get(0, 1);
+            $AnnouncementlistTwo = Announcement::get(1, 1);
+            $AnnouncementlistThree = Announcement::get(2, 2);
+            $FilePetition = Petition::get($uname);
             require_once('css/nisit.php');
         }
         else if ($TypeLogin == "teacher"){
             require_once("models/InformationDetail.php");
             require_once("models/Announcement.php");
+            require_once("models/Petition.php");
             $Info = InformationDetail::get($uname);
             $AnnouncementlistOne = Announcement::get(0, 1);
             $AnnouncementlistTwo = Announcement::get(1, 1);

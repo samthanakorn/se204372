@@ -1,8 +1,33 @@
+<?php
+include 'filesLogic.php';
+?>
+<style>
+    form {
+        width: 30%;
+        margin: 100px auto;
+        padding: 30px;
+        border: 1px solid #555;
+    }
+
+    input {
+        width: 100%;
+        border: 1px solid #f1e1e1;
+        display: block;
+        padding: 5px 10px;
+    }
+
+    button {
+        border: none;
+        padding: 10px;
+        border-radius: 10px;
+    }
+</style>
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
     <!--================= FAVICON =================-->
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
@@ -19,6 +44,7 @@
 
     <title> Online Internship Management Systems </title>
 </head>
+
 <body>
     <!--==============HEADER==============Online Internship Management Systems-->
     <header class="header" id="header">
@@ -35,7 +61,7 @@
 
                     <li class="nav__item">
                         <a href="#about" class="nav__link">
-                            <i class='bx bxs-user' ></i>
+                            <i class='bx bxs-user'></i>
                         </a>
                     </li>
 
@@ -47,7 +73,7 @@
 
                     <li class="nav__item">
                         <a href="#work" class="nav__link">
-                            <i class='bx bx-briefcase-alt-2' ></i>
+                            <i class='bx bx-briefcase-alt-2'></i>
                         </a>
                     </li>
 
@@ -59,56 +85,199 @@
                 </ul>
             </div>
 
-            <!-- Theme change button
-            <i class='bx bx-moon change-theme' id="theme-button"></i>-->
             <div class="text__header dropdown">
-                <span>Student</span>
+                <span>Nisit</span>
                 <div class="dropdown-content">
-                    <a href="#">Edit Profile</a><br>
-                    <a href="../index.php">Logout</a>
+                    <a href="#Profile">Edit Profile</a><br>
+                    <a href="index.php">Logout</a>
                 </div>
             </div>
         </nav>
     </header>
- 
+
     <!--==============MAIN==============-->
     <main class="main">
-            <!--==============HOME==============-->
-            <section class="home section" id="home">
-                <div class="home__container container grid">
-                    <div class="home__data">
-                        <span class="home__greeting">Hello, This is</span>
-                        <h1 class="home__name">Online internship</h1>
-                        <h1 class="home__name"> management system</h1>
-                        <div class="line__title"></div>
-                        <h3 class="home__education">Welcome [Name]</h3>
+        <!--==============HOME==============-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <span class="home__greeting">Hello, This is</span>
+                    <h1 class="home__name">Online internship</h1>
+                    <h1 class="home__name"> management system</h1>
+                    <div class="line__title"></div>
+                    <h3 class="home__education">Welcome <?php echo "$Info->Name"; ?></h3>
 
-                    </div>
-                   
-                    <div class="home__handle">
-                        <img src="../img/home.png" alt="" class="home__img">
-                    </div>
+                </div>
 
-                    <div class="home__social">
-                        <a href="https://www.linkedin.com/" target="_blank" class="home__social-link">
-                            <i class='bx bxl-linkedin-square' ></i>
-                        </a>
-                        <a href="https://github.com/" target="_blank" class="home__social-link">
-                            <i class='bx bxl-github' ></i>
-                        </a>
-                        <a href="https://dribble.com/" target="_blank" class="home__social-link">
-                            <i class='bx bxl-dribbble'></i>
-                        </a>
-                    </div>
+                <div class="home__handle">
+                    <img src="img/home.png" alt="" class="home__img">
+                </div>
 
-                    <a href="#about" class="home__scroll">
-                        <i class='bx bx-mouse home__scroll-icon' ></i>
-                        <span class="home__scroll-name">Scroll Down</span>
-
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/" target="_blank" class="home__social-link">
+                        <i class='bx bxl-linkedin-square'></i>
                     </a>
-                </div>   
-            </section>
-            <!--==============ABOUT==============-->
+                    <a href="https://github.com/" target="_blank" class="home__social-link">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="https://dribble.com/" target="_blank" class="home__social-link">
+                        <i class='bx bxl-dribbble'></i>
+                    </a>
+                </div>
+
+                <a href="#Announcements" class="home__scroll">
+                    <i class='bx bx-mouse home__scroll-icon'></i>
+                    <span class="home__scroll-name">Scroll Down</span>
+
+                </a>
+            </div>
+        </section>
+
+        <!--==============SERVICES==============-->
+        <section class="services section" id="Announcements">
+            <span class="section__subtitle">The University</span>
+            <h2 class="section__title">Announcement</h2>
+
+            <div class="services__container container grid">
+                <div class="services__card">
+                    <h3 class="services__title"><?php echo "$AnnouncementlistOne->ANMCompanyName"; ?></h3>
+                    <div class="line__social"></div>
+                    <h4 class="services__inside"><?php echo "$AnnouncementlistOne->ANMBriefDescription"; ?>
+                        <br><br>👉 <?php echo "$AnnouncementlistOne->ANMTimeDescription"; ?>
+                    </h4>
+
+                    <div class="areabutton1">
+                        <span class="services__button button">
+                            See more <i class='bx bx-right-arrow-alt services__icon'></i>
+                        </span>
+                    </div>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+
+                            <h3 class="services__modal-title"><?php echo "$AnnouncementlistOne->ANMCompanyName"; ?></h3>
+                            <div class="line__social"></div>
+                            <p class="services__modal-description">
+                                <?php echo "$AnnouncementlistOne->ANMFullDescription"; ?>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services__card">
+                    <h3 class="services__title"><?php echo "$AnnouncementlistTwo->ANMCompanyName"; ?></h3>
+                    <div class="line__social"></div>
+                    <h4 class="services__inside"><?php echo "$AnnouncementlistTwo->ANMBriefDescription"; ?>
+                        <br><br>👉 <?php echo "$AnnouncementlistTwo->ANMTimeDescription"; ?>
+                    </h4>
+
+                    <div class="areabutton1">
+                        <span class="services__button button">
+                            See more <i class='bx bx-right-arrow-alt services__icon'></i>
+                        </span>
+                    </div>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+
+                            <h3 class="services__modal-title"><?php echo "$AnnouncementlistTwo->ANMCompanyName"; ?></h3>
+                            <div class="line__social"></div>
+                            <p class="services__modal-description">
+                                <?php echo "$AnnouncementlistTwo->ANMFullDescription"; ?>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="services__card">
+                    <h3 class="services__title"><?php echo "$AnnouncementlistThree->ANMCompanyName"; ?></h3>
+                    <div class="line__social"></div>
+                    <h4 class="services__inside"><?php echo "$AnnouncementlistThree->ANMBriefDescription"; ?>
+                        <br><br>👉 <?php echo "$AnnouncementlistThree->ANMTimeDescription"; ?>
+                    </h4>
+
+                    <div class="areabutton1">
+                        <span class="services__button button">
+                            See more <i class='bx bx-right-arrow-alt services__icon'></i>
+                        </span>
+                    </div>
+
+                    <div class="services__modal">
+                        <div class="services__modal-content">
+                            <i class='bx bx-x services__modal-close'></i>
+
+                            <h3 class="services__modal-title"><?php echo "$AnnouncementlistThree->ANMCompanyName"; ?></h3>
+                            <div class="line__social"></div>
+                            <p class="services__modal-description">
+                                <?php echo "$AnnouncementlistThree->ANMFullDescription"; ?>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about section" id="Profile">
+            <h2 class="section__title"><?php echo "$Info->Name $Info->LastName"; ?></h2>
+            <div class="line__title"></div>
+
+            <div class="container profile__container">
+                <img src="img/myprofile.jpg" alt="" class="about__img">
+
+                <div class="about__data">
+                    <div class="wizard">
+                        <div id="Receive" class="Circle"></div>
+                        <div class="LineTo"></div>
+                        <div id="Consider" class="Circle"></div>
+                        <div class="LineTo"></div>
+                        <div id="Verify" class="Circle"></div>
+                        <div class="LineTo"></div>
+                        <div id="Approve" class="Circle"></div>
+                    </div>
+                    <h4 class="about__title" id="TitlePetition">Your Internship documents isn't upload</h4>
+                    <div class="about__box">
+                        <i class='bx bxs-x-circle'></i>
+                        <h3 class="about__titleinside">Internship Completed</h3>
+                        <i class='bx bxs-x-circle bx-lg iconshow'></i>
+                    </div>
+
+                    <div class="about__setup">
+                        <select class="about__boxload about__titleinside titleinsidewhite">
+                            <option>Download</option>
+                            <option value="/oism.pdf">OISM Document</option>
+                            <option value="/test.pdf">PDF Document</option>
+                        </select>
+                        <div class="about__boxload">
+                            <h3 class="about__titleinside titleinsidewhite">Download</h3>
+                            <i class='bx bx-chevron-down bx-lg iconload'></i>
+                        </div>
+                        <!--<div class="about__boxload">
+                            <h3 class="about__titleinside titleinsidewhite">Upload</h3>
+                            <i class='bx bx-chevron-down bx-lg iconload'></i>
+                        </div>-->
+                    </div>
+
+                    <a href="test.php">Go</a>
+                    <form action="#" method="POST">
+                        <h3>Upload Files</h3>
+                        <input type="file" name="myfile"><br>
+                        <button type="submit" name="upload">Upload</button>
+                    </form>
+                    <select name="download" onChange="download(this.value)">
+                        <option>Select document</option>
+                        <option value="/oism.pdf">OISM Document</option>
+                        <option value="/test.pdf">PDF Document</option>
+                    </select>
+                </div>
+            </div>
+            </div>
+        </section>
+        <!--
             <section class="about section" id="about">
                 <span class="section__subtitle">My Intro</span>
                 <h2 class="section__title">About Me</h2>
@@ -148,7 +317,7 @@
                 </div>
             </section>
 
-            <!--==============SKILLS==============-->
+
             <section class="skills section" id="skills">
                 <span class="section__subtitle">My abilities</span>
                 <h2 class="section__title">My Experience</h2>
@@ -275,7 +444,7 @@
                     </div>
                 </div>
             </section>
-            <!--==============SERVICES==============-->
+          
         <section class="services section">
             <span class="section__subtitle">My Services</span>
             <h2 class="section__title">What I Offer</h2>
@@ -456,7 +625,7 @@
             </div>
         </section>
 
-        <!--================ work ===================-->
+      
         <section class="work section" id="work">
             <span class="section__subtitle">My Portfolio</span>
             <h2 class="section__title">Recent Works</h2>
@@ -521,7 +690,7 @@
             </div>
         </section>
 
-        <!--============= TESTIMONIALS ================-->
+       
             <section class="testimonial section">
                 <span class="section__subtitle">Find All</span>
                 <h2 class="section__title">INTERNSHIP</h2>
@@ -563,7 +732,7 @@
                 </div>
             </section>
 
-        <!--============== CONTACT =================-->
+        
             <section class="contact section" id="contact">
                 <span class="section__subtitle">Get in touch</span>
                 <h2 class="section__title">Contact Me</h2>
@@ -628,57 +797,99 @@
                         </form>
                     </div>
                 </div>
-            </section>
+            </section>-->
     </main>
 
-        <!--==============FOOTER==============-->
-        <footer class="footer">
-            <div class="footer__container container">
-                <ul class="footer__list">
-                    <li>
-                        <a href="#Home" class="footer__link">Home</a>
-                    </li>
-                    <li>
-                        <a href="#Announcements" class="footer__link">Announcements</a>
-                    </li>
-                    <li>
-                        <a href="#Internship" class="footer__link">Internship</a>
-                    </li>
-                    <li>
-                        <a href="#Profile" class="footer__link">Profile</a>
-                    </li>
-                </ul>
+    <!--==============FOOTER==============-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <ul class="footer__list">
+                <li>
+                    <a href="#home" class="footer__link">Home</a>
+                </li>
+                <li>
+                    <a href="#Announcements" class="footer__link">Announcements</a>
+                </li>
+                <li>
+                    <a href="#Internship" class="footer__link">Internship</a>
+                </li>
+                <li>
+                    <a href="#Profile" class="footer__link">Profile</a>
+                </li>
+            </ul>
 
-                <div class="line__social"></div>
+            <div class="line__social"></div>
 
-                <ul class="footer__social">
-                    <a href="https://www.facebook.com" target="_blank" class="footer__social-link">
-                        <i class='bx bxl-microsoft-teams'></i>
-                    </a>
-                    <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
-                        <i class='bx bxl-instagram-alt'></i>
-                    </a>
-                    <a href="https://www.facebook.com" target="_blank" class="footer__social-link">
-                        <i class='bx bxl-facebook-circle'></i>  
-                    </a>
-                </ul>
+            <ul class="footer__social">
+                <a href="https://www.facebook.com" target="_blank" class="footer__social-link">
+                    <i class='bx bxl-microsoft-teams'></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                    <i class='bx bxl-instagram-alt'></i>
+                </a>
+                <a href="https://www.facebook.com" target="_blank" class="footer__social-link">
+                    <i class='bx bxl-facebook-circle'></i>
+                </a>
+            </ul>
 
-                <span class="footer__copy">
-                    &#169; BoonyaratFC. All rights reserved
-                </span>
-            </div>
-        </footer>
+            <span class="footer__copy">
+                &#169; BoonyaratFC. All rights reserved
+            </span>
+        </div>
+    </footer>
 
-        <!--============== SCROLLREVEAL ==============-->
-        <script src="js/scrollreveal.min.js"></script>
+    <!--============== SCROLLREVEAL ==============-->
+    <script src="js/scrollreveal.min.js"></script>
 
-        <!--============== SWIPER JS ==============-->
-        <script src="js/swiper-bundle.min.js"></script>
+    <!--============== SWIPER JS ==============-->
+    <script src="js/swiper-bundle.min.js"></script>
 
-        <!--============== MIXITUP FILTER ===========-->
-        <script src="js/mixitup.min.js"></script>
+    <!--============== MIXITUP FILTER ===========-->
+    <script src="js/mixitup.min.js"></script>
 
-        <!--============= MAIN JS==================-->
-        <script src="js/main.js"></script>
-    </body>
+    <!--============= MAIN JS==================-->
+    <script src="js/main.js"></script>
+
+    <script type="text/javascript">
+        const ReceivePetition = document.getElementById("Receive");
+        const ConsiderPetition = document.getElementById("Consider");
+        const VerifyPetition = document.getElementById("Verify");
+        const ApprovePetition = document.getElementById("Approve");
+        const TextPetition = document.getElementById("TitlePetition");
+        const MainColor = "#ffbab3";
+
+        function download(d) {
+            if (d == 'Select document') return;
+            window.location = 'http://example.com' + d;
+        }
+
+        switch ("<?php echo $FilePetition->Status; ?>") {
+            case "Receive":
+                ReceivePetition.style.backgroundColor = MainColor;
+                TextPetition.innerHTML = "The Committee is received";
+                break;
+            case "Consider":
+                ReceivePetition.style.backgroundColor = MainColor;
+                ConsiderPetition.style.backgroundColor = MainColor;
+                TextPetition.innerHTML = "The Committee is considering";
+                break;
+            case "Verify":
+                ReceivePetition.style.backgroundColor = MainColor;
+                ConsiderPetition.style.backgroundColor = MainColor;
+                VerifyPetition.style.backgroundColor = MainColor;
+                TextPetition.innerHTML = "The Committee is verifying";
+                break;
+            case "Approve":
+                ReceivePetition.style.backgroundColor = MainColor;
+                ConsiderPetition.style.backgroundColor = MainColor;
+                VerifyPetition.style.backgroundColor = MainColor;
+                ApprovePetition.style.backgroundColor = MainColor;
+                TextPetition.innerHTML = "The Committee is approved";
+                break;
+            default:
+                ;
+        }
+    </script>
+</body>
+
 </html>

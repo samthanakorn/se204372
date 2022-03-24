@@ -435,6 +435,21 @@ transition: .4s; /* for light mode animation */
   font-weight: var(--font-medium);
   transition: .4s;
 }
+.betweenbutton{
+  width: 28px;
+  height: 25px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--first-color);
+  color: var(--body-color);
+  border-radius: 2.5rem;
+  margin: 5px;
+  font-weight: var(--font-medium);
+  transition: .4s;
+}
 
 .buttonGuest{
   width: 116px;
@@ -445,6 +460,10 @@ transition: .4s; /* for light mode animation */
   color: var(--first-color);
 }
 
+.betweenbutton:hover{
+  background-color: var(--first-color-alt);
+  color: var(--body-color);
+}
 .button:hover{
   background-color: var(--first-color-alt);
   color: var(--body-color);
@@ -463,6 +482,14 @@ transition: .4s; /* for light mode animation */
   row-gap: 2.5rem;
 }
 
+.profile__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
 .about__img{
   width: 220px;
   border-radius: 1.5rem;
@@ -471,6 +498,10 @@ transition: .4s; /* for light mode animation */
 
 .about__data{
   text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 40px;
 }
 
 .about__info{
@@ -480,10 +511,35 @@ transition: .4s; /* for light mode animation */
   margin-bottom: 2rem;
 }
 
+.about__setup{
+  display: flex;
+  flex-direction: row;
+}
+
 .about__box{
-  background-color: var(--container-color);
-  border-radius: .75rem;
-  padding: 1rem 1rem;
+  width: 93.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: var(--first-color);
+    border-radius: 0.75rem;
+    padding: 1rem 1rem;
+    margin: 20px;
+    align-items: center;
+}
+.about__boxload{
+  width: 92.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--first-color);
+    border-style: solid;
+    border-color: var(--first-color);
+    border-radius: 0.75rem;
+    padding: 1rem 1rem;
+    margin: 0px 20px;
+    align-items: center;
 }
 
 .about__icon{
@@ -493,7 +549,19 @@ transition: .4s; /* for light mode animation */
 }
 
 .about__title{
-  font-size: var(--small-font-size);
+  color: var(--container-color);
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.about__titleinside{
+  color: var(--container-color);
+  font-size: 26px;
+  font-family: var(--body-font);
+  /*margin-left: 12px;*/
+  font-weight: bold;
+}
+.titleinsidewhite{
+  color: white;
 }
 
 .about__subttile{
@@ -1149,10 +1217,14 @@ margin-bottom: 2rem;
   }
 
   .about__img{
-    width: 350px;
+    width: 300px;
   }
   .about__data{
-    text-align: initial;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 40px;
   }
   .about__info{
     justify-content: initial;
@@ -1293,4 +1365,35 @@ input[type="text"],input[type="password"]{
   background-color: var(--title-color);
   margin-top: 16px;
   margin-bottom: 2rem;
+}
+
+.iconload{
+  color: white;
+  margin-left: 30px;
+}
+
+.iconshow{
+  color: red;
+}
+
+.wizard{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.Circle{
+  width: 40px;
+  height: 40px;
+  border: solid;
+  border-color: var(--first-color);
+  border-width: 6px;
+  border-radius: 20px;
+}
+.LineTo{
+  height: 3.75px;
+  width: 16%;
+  background-color: var(--first-color);
 }

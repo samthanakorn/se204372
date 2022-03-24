@@ -62,7 +62,7 @@
             <div class="text__header dropdown">
                 <span>Teacher</span>
                 <div class="dropdown-content">
-                    <a href="#">Edit Profile</a><br>
+                    <a href="#Profile">Edit Profile</a><br>
                     <a href="index.php">Logout</a>
                 </div>
             </div>
@@ -120,8 +120,14 @@
                         <br><br>👉 <?php echo "$AnnouncementlistOne->ANMTimeDescription";?></h4>
 
                     <div class="areabutton1">
+                        <span class="betweenbutton">
+                           <i class='bx bx-trash'></i>
+                        </span>
                         <span class="services__button button">
                             See more <i class='bx bx-right-arrow-alt services__icon' ></i>
+                        </span>
+                        <span class="betweenbutton">
+                            <i class='bx bxs-edit'></i>
                         </span>
                     </div>
 
@@ -146,8 +152,14 @@
                         <br><br>👉 <?php echo "$AnnouncementlistTwo->ANMTimeDescription";?></h4>
 
                     <div class="areabutton1">
+                        <span class="betweenbutton">
+                           <i class='bx bx-trash'></i>
+                        </span>
                         <span class="services__button button">
                             See more <i class='bx bx-right-arrow-alt services__icon' ></i>
+                        </span>
+                        <span class="betweenbutton">
+                            <i class='bx bxs-edit'></i>
                         </span>
                     </div>
 
@@ -172,8 +184,14 @@
                         <br><br>👉 <?php echo "$AnnouncementlistThree->ANMTimeDescription";?></h4>
 
                     <div class="areabutton1">
+                        <span class="betweenbutton">
+                           <i class='bx bx-trash'></i>
+                        </span>
                         <span class="services__button button">
                             See more <i class='bx bx-right-arrow-alt services__icon' ></i>
+                        </span>
+                        <span class="betweenbutton">
+                            <i class='bx bxs-edit'></i>
                         </span>
                     </div>
 
