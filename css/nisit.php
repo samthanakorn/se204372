@@ -54,39 +54,33 @@ include 'filesLogic.php';
             <div class="nav__menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">
+                        <a href="#home" class="nav__link">
                             <i class='bx bx-home-alt'></i>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#about" class="nav__link">
+                        <a href="#Announcements" class="nav__link">
+                            <i class='bx bxs-message-square-dots'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#Internship" class="nav__link">
+                            <i class='bx bx-building-house'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#Profile" class="nav__link">
                             <i class='bx bxs-user'></i>
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#skills" class="nav__link">
-                            <i class='bx bxs-book'></i>
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#work" class="nav__link">
-                            <i class='bx bx-briefcase-alt-2'></i>
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">
-                            <i class='bx bx-message-square-detail'></i>
                         </a>
                     </li>
                 </ul>
             </div>
 
             <div class="text__header dropdown">
-                <span>Nisit</span>
+                <span class="TypeUser">Nisit</span>
                 <div class="dropdown-content">
                     <a href="#Profile">Edit Profile</a><br>
                     <a href="index.php">Logout</a>
@@ -264,7 +258,8 @@ include 'filesLogic.php';
                         </a>
                     </div>
 
-                    <a href="test.php">Go</a>
+                    <a href="TableShow.php">Go</a>
+
                     <!--<form action="#" method="POST">
                         <h3>Upload Files</h3>
                         <input type="file" name="myfile"><br>

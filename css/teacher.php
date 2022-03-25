@@ -36,39 +36,33 @@ require_once('css/teacher.php');
             <div class="nav__menu">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="#home" class="nav__link active-link">
+                        <a href="#home" class="nav__link">
                             <i class='bx bx-home-alt'></i>
                         </a>
                     </li>
 
                     <li class="nav__item">
-                        <a href="#about" class="nav__link">
+                        <a href="#Announcements" class="nav__link">
+                            <i class='bx bxs-message-square-dots'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#Internship" class="nav__link">
+                            <i class='bx bx-building-house'></i>
+                        </a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="#Profile" class="nav__link">
                             <i class='bx bxs-user'></i>
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#skills" class="nav__link">
-                            <i class='bx bxs-book'></i>
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#work" class="nav__link">
-                            <i class='bx bx-briefcase-alt-2'></i>
-                        </a>
-                    </li>
-
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">
-                            <i class='bx bx-message-square-detail'></i>
                         </a>
                     </li>
                 </ul>
             </div>
 
             <div class="text__header dropdown">
-                <span>Teacher</span>
+                <span class="TypeUser">Teacher</span>
                 <div class="dropdown-content">
                     <a href="#Profile">Edit Profile</a><br>
                     <a href="index.php">Logout</a>
@@ -226,16 +220,16 @@ require_once('css/teacher.php');
             <span class="section__subtitle">Find All</span>
             <h2 class="section__title">INTERNSHIP</h2>
 
-            <div class="search">Search
-                <label>
-                    <form method="get" action="">
-                        <input type="text" name="key" placeholder="Search here">
-                        <button type="submit" name="action" value="search">
-                            <ion-icon name="search-sharp"></ion-icon>
-                        </button>
-                    </form>
-                </label>
-            </div>
+
+            <label class="search">
+                <form method="get" action="">
+                    <input type="text" name="key" placeholder="Search here">
+                    <button type="submit" name="action" value="search">
+                        <ion-icon name="search-sharp"></ion-icon>
+                    </button>
+                </form>
+            </label>
+
 
             <div class="testimonial__container container swiper">
                 <div class="swiper-wrapper">
@@ -299,7 +293,8 @@ require_once('css/teacher.php');
 
                     <div class="about__setup">
                         <div class="about__boxcheck">
-                            <h3 class="about__titleinside titleinsidemain"><?php $Number = 62 - $ShowApproved; echo "$Number"; ?></h3>
+                            <h3 class="about__titleinside titleinsidemain"><?php $Number = 62 - $ShowApproved;
+                                                                            echo "$Number"; ?></h3>
                         </div>
                         <div class="about__boxloadcheck">
                             <h3 class="about__titleinside titleinsidewhite noleft"><?php echo "$ShowApproved"; ?></h3>
@@ -316,7 +311,7 @@ require_once('css/teacher.php');
                     </div>
                     <div class="about__setup">
                         <a class="about__boxloadEx2">
-                        <i class='bx bx-chevron-down bx-lg iconnosee'></i>
+                            <i class='bx bx-chevron-down bx-lg iconnosee'></i>
                             <h3 class="about__titleinside titleinsidewhite noleft2">Upload</h3>
                             <i class='bx bx-chevron-down bx-lg'></i>
                         </a>
@@ -455,66 +450,7 @@ require_once('css/teacher.php');
             </section>-->
 
         <section class="work section" id="work">
-            <span class="section__subtitle">My Portfolio</span>
-            <h2 class="section__title">Recent Works</h2>
-
-            <div class="work__filters">
-                <span class="work__item active-work" data-filter='all'>All</span>
-                <span class="work__item" data-filter='.web'>Web</span>
-                <span class="work__item" data-filter='.movil'>Movil</span>
-                <span class="work__item" data-filter='.design'>Design</span>
-            </div>
-
             <div class="work__container container grid">
-                <div class="work__card mix web">
-                    <img src="img/work1.jpg" alt="" class="work__img">
-
-                    <h3 class="work__title">Web design</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow-alt work__icon'></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix movil">
-                    <img src="img/work2.jpg" alt="" class="work__img">
-
-                    <h3 class="work__title">App movil</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow-alt work__icon'></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix design">
-                    <img src="img/work3.jpg" alt="" class="work__img">
-
-                    <h3 class="work__title">Brand design</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow-alt work__icon'></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix web">
-                    <img src="img/work4.jpg" alt="" class="work__img">
-
-                    <h3 class="work__title">Web design</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow-alt work__icon'></i>
-                    </a>
-                </div>
-
-                <div class="work__card mix movil">
-                    <img src="img/work5.jpg" alt="" class="work__img">
-
-                    <h3 class="work__title">App movil</h3>
-
-                    <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow-alt work__icon'></i>
-                    </a>
-                </div>
             </div>
         </section>
         <!--
@@ -634,7 +570,7 @@ require_once('css/teacher.php');
 
     <!--============= MAIN JS==================-->
     <script src="js/main.js"></script>
-    
+
 </body>
 
 </html>

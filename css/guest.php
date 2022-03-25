@@ -46,7 +46,7 @@ if(isset($_POST['username'])){
                 <a href="#" class="nav__logo">FindW</a>
 
                 <div class="text__header dropdown">
-                    <span>Company</span>
+                    <span class="TypeUser">Company</span>
                     <div class="dropdown-content">
                         <a href="#" class="loginshow">Login</a><br>
                         <a href="../index.php">Logout</a>
@@ -100,27 +100,27 @@ if(isset($_POST['username'])){
 
                 <div class="about__container container grid">
                     <div class="arrowGone"></div>
-                    <div class="about__data">
+                    <div class="about__data2">
                         <div class="about__info">
-                            <div class="about__box">
-                                <h3 class="about__title">บริษัทกรอกข้อมูล</h3>
+                            <div class="about__box2">
+                                <h3 class="about__title2">บริษัทกรอกข้อมูล</h3>
                                 <span class="about__subtitle">แบบแสดงความประสงค์รับนิสิตฝึกงาน/สหกิจฝึกษา
                                 </span>
                             </div>
 
-                            <div class="about__box">
+                            <div class="about__box2">
                                 <span class="about__subtitle">กรรมการประจำหลักสูตร</span>
-                                <h3 class="about__title">พิจารณาข้อมูล</h3>
+                                <h3 class="about__title2">พิจารณาข้อมูล</h3>
                                 <span class="about__subtitle">ที่บริษัทแจ้งความจำนง</span>
                             </div>
 
-                            <div class="about__box">
-                                <h3 class="about__title">ประกาศแจ้งนิสิตทราบ</h3>
+                            <div class="about__box2">
+                                <h3 class="about__title2">ประกาศแจ้งนิสิตทราบ</h3>
                                 <span class="about__subtitle">สำหรับบริษัทที่ผ่านการพิจารณา</span>
                             </div>
 
-                            <div class="about__box">
-                                <h3 class="about__title">นิสิตยื่นความจำนง</h3>
+                            <div class="about__box2">
+                                <h3 class="about__title2">นิสิตยื่นความจำนง</h3>
                                 <span class="about__subtitle">ฝึกงาน/สหกิจฝึกษา</span>
                             </div>
                         </div>
@@ -132,33 +132,218 @@ if(isset($_POST['username'])){
                 </div>
             </section>
 
+
             <section class="contact section" id="FormCompany">
-                <span class="section__subtitle">Fill in Information</span>
-                <h2 class="section__title">About the Company</h2>
+            <span class="section__subtitle">กรอกข้อมูล</span>
+            <h2 class="section__title">เกี่ยวกับบริษัท</h2>
 
-                <div class="contact__container container grid">
-                    <div class="contact__content">
-                        <form action="" class="contact__form">
-                            <div class="contact__form-div">
-                                <label for="" class="contact__form-tag">Names</label>
-                                <input type="text" placeholder="Insert your name" class="contact__form-input">
-                            </div>
-
-                            <div class="contact__form-div">
-                                <label for="" class="contact__form-tag">Mail</label>
-                                <input type="email" placeholder="Insert your email" class="contact__form-input">
-                            </div>
-
-                            <div class="contact__form-div contact__form-area">
-                                <label for="" class="contact__form-tag">Project</label>
-                                <textarea name="" id="" cols="30" rows="10" placeholder="Write your project" class="contact__form-input"></textarea>
-                            </div>
-
-                            <button class="button">Send Message</button>
-                        </form>
+            <div class="contact__container1 container grid">
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">ชื่อบริษัท</label>
+                            <input type="text" name="company_name" placeholder="กรอกชื่อบริษัทของคุณ" class="contact__form-input">
+                        </div>
                     </div>
                 </div>
-            </section>
+
+            </div>
+
+            <div class="contact__container container grid">
+                <div class="contact__content">
+
+                    <div class="contact__form">
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">ประเภทบริษัท</label>
+                            <input type="text" name="company_type" placeholder="กรอกประเภทบริษัทของคุณ" class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">เบอร์โทรศัพท์ ของสถานประกอบการ/หน่วยงาน</label>
+                            <input type="text" name="company_phone" placeholder="กรอกเบอร์โทรศัพท์ ของสถานประกอบการ/หน่วยงาน" class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">อีเมล (E-mail) ของสถานประกอบการ/หน่วยงาน</label>
+                            <input type="text" name="company_manager" placeholder="กรอกอีเมล ของสถานประกอบการ/หน่วยงาน" class="contact__form-input">
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="contact__content">
+
+
+                    <form action="" class="contact__form">
+
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">ที่อยู่ ของสถานประกอบการ/หน่วยงาน</label>
+                            <input type="text" name="company_address" placeholder="กรอกที่อยู่ ของสถานประกอบการ/หน่วยงาน" class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">เบอร์โทรสาร ของสถานประกอบการ/หน่วยงาน</label>
+                            <input type="text" name="company_fax" placeholder="กรอกเบอร์โทรสาร ของสถานประกอบการ/หน่วยงาน" class="contact__form-input">
+                        </div>
+
+                    </form>
+                </div>
+
+
+
+            </div>
+
+           
+            
+            
+            
+            
+            <div class="contact__container1 container grid">
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">ชื่อผู้จัดการ สถานประกอบการ/หน่วยงาน</label>
+                            <input type="text" name="company_email" placeholder="กรอกชื่อผู้จัดการ สถานประกอบการ/หัวหน้าหน่วยงาน" class="contact__form-input">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="contact__container container grid">
+                <div class="contact__content">
+
+                    <div class="contact__form">
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">ตำแหน่งงาน ของผู้จัดการ/หัวหน้าหน่วยงาน</label>
+                            <input type="text" name="company_posManager" placeholder="กรอกตำแหน่งงาน ของผู้จัดการ/หัวหน้าหน่วยงาน" class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">ตำแหน่งของผู้ประสานงาน</label>
+                            <input type="text" name="company_posCoordinator" placeholder="ตำแหน่งของผู้ประสานงาน" class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">เบอร์โทรศัพท์ของผู้ประสานงาน</label>
+                            <input type="text" name="coordinator_phone" placeholder="กรอกเบอร์โทรศัพท์ของผู้ประสานงาน" class="contact__form-input">
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="contact__content">
+
+
+                    <form action="" class="contact__form">
+
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">ชื่อผู้ประสานงาน ของสถานประกอบการ/หน่วยงาน</label>
+                            <input type="text" name="company_coordinator" placeholder="กรอกชื่อผู้ประสานงาน ของสถานประกอบการ/หน่วยงาน" class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">แผนก/ฝ่าย ของผู้ประสานงาน</label>
+                            <input type="text" name="company_department" placeholder="กรอกแผนก/ฝ่าย ของผู้ประสานงาน" class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">อีเมล (E-mail) ของผู้ประสานงาน</label>
+                            <input type="text" name="coordinator_email" placeholder="กรอกอีเมล (E-mail) ของผู้ประสานงาน" class="contact__form-input">
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+
+            <div class="contact__container1 container grid">
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">ฝ่าย/แผนก ที่นิสิตฝึกงาน/สหกิจศึกษา</label>
+                            <input type="text" name="company_jopTitle " placeholder="กรอกฝ่าย/แผนก ที่นิสิตฝึกงาน/สหกิจศึกษา" class="contact__form-input">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="contact__container container grid">
+                <div class="contact__content">
+
+                    <div class="contact__form">
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">ตำแหน่งงานที่ต้องการรับนิสิตฝึกงาน/สหกิจศึกษา</label>
+                            <input type="text" name="company_posCooperative" placeholder="กรอกตำแหน่งงานที่ต้องการรับนิสิตฝึกงาน/สหกิจศึกษา" class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">จำนวน (คน)</label>
+                            <input type="text" name="company_numPeople" placeholder="กรอกกรอกจำนวน (คน)" class="contact__form-input">
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="contact__content">
+
+
+                    <form action="" class="contact__form">
+
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">ลักษณะงานที่นิสิตต้องปฏิบัติ (Job Description)</label>
+                            <input type="text" name="company_natureOfWork" placeholder="กรอกลักษณะงานที่นิสิตต้องปฏิบัติ " class="contact__form-input">
+                        </div>
+
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">ความสามารถทางวิชาการหรือทักษะที่นิสิตควรมี</label>
+                            <input type="text" name="company_selectionStudent" placeholder="กรอกความสามารถทางวิชาการหรือทักษะที่นิสิตควรมี" class="contact__form-input">
+                        </div>
+
+                    </form>
+                </div>
+
+
+
+            </div>
+            <div class="test">
+                <h2 class="section__title">ตำแหน่งงานที่ต้องการรับนิสิตฝึกงาน/สหกิจศึกษา</h2>
+                <div class="test4">
+                    <input type="checkbox" id="work1" name="work1" value="summer">
+                    <label for="work1"> 18 เมษายน 2565 – 10 มิถุนายน 2565 (ฝึกงาน อย่างน้อย 30 วันทำการ)</label>
+                    
+                </div>
+                <div class="test4">
+                    <input type="checkbox" id="work2" name="work2" value="semeter">
+                    <label for="work2"> 28 พฤศจิกายน 2565 – 7 เมษายน 2566 (สหกิจศึกษา อย่างน้อย 16 สัปดาห์)</label>
+                </div>
+            </div>
+
+            
+            <div class="contact__container1 container grid">
+                <div class="contact__content">
+                    <div class="contact__info">
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">จำนวนค่าตอบแทน (บาท/วัน หรือ บาท/เดือน)</label>
+                            <input type="text" name="company_compensation " placeholder="กรอกจำนวนค่าตอบแทนา" class="contact__form-input">
+                        </div>
+                        <div class="contact__form-div">
+                            <label for="" class="contact__form-tag">สวัสดิการอื่นๆ ถ้ามี (เช่น อาหาร รถรับส่ง)</label>
+                            <input type="text" name="company_room " placeholder="กรอกสวัสดิการ" class="contact__form-input">
+                        </div>
+                    </div>
+                </div>
+                <button class="button buttoncompany">Submit</button>
+
+            </div>
+           
+
+        </section>
 
             <footer class="footer">
                 <div class="footer__container container">

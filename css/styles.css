@@ -496,6 +496,10 @@ transition: .4s; /* for light mode animation */
   justify-self: center;
 }
 
+.about__data2 {
+  text-align: center;
+}
+
 .about__data{
   text-align: center;
     display: flex;
@@ -514,6 +518,12 @@ transition: .4s; /* for light mode animation */
 .about__setup{
   display: flex;
   flex-direction: row;
+}
+
+.about__box2 {
+  background-color: var(--container-color);
+  border-radius: 0.75rem;
+  padding: 1rem 1rem;
 }
 
 .about__box{
@@ -605,6 +615,9 @@ transition: .4s; /* for light mode animation */
   color: var(--container-color);
   font-size: 26px;
   margin-bottom: 10px;
+}
+.about__title2 {
+  font-size: var(--small-font-size);
 }
 .about__titleinside{
   color: var(--container-color);
@@ -733,19 +746,6 @@ transition: .4s; /* for light mode animation */
 
 /* Services modal */
 .services__modal{
-  position: fixed;
-  inset: 0;
-  background-color: hsla(0, 0%, 0%, .45);
-  padding: 2rem 1rem;
-  display: grid;
-  place-items: center;
-  visibility: hidden;
-  opacity: 0;
-  transition: .4s;
-  z-index: var(--z-modal);
-}
-
-.deletemodal{
   position: fixed;
   inset: 0;
   background-color: hsla(0, 0%, 0%, .45);
@@ -895,7 +895,6 @@ work__icon{
 .search{
   height: 40px;
   width: 300px;
-  background-color: var(--container-color);
   text-align: center;
   font-size: 18px;
   font-weight: bold;
@@ -1018,7 +1017,7 @@ work__icon{
   height: 100%;
   border: 2px solid var(--text-color-light);
   background: none;
-  color: var(--text-color);
+  color: var(--container-color);
   outline: none;
   padding: 1.5rem;
   border-radius: .75rem;
@@ -1027,11 +1026,11 @@ work__icon{
 
 .contact__form-tag{
   position: absolute;
-  top: -.75rem;
+  background-color: white;
   left: 1.25rem;
   font-size: var(--smaller-font-size);
   padding: .25rem;
-  background-color: var(--body-color);
+  color: var(--container-color);
   z-index: 10;
 }
 
@@ -1300,6 +1299,9 @@ margin-bottom: 2rem;
   .about__img{
     width: 300px;
   }
+  .about__data2 {
+    text-align: initial;
+}
   .about__data{
     text-align: center;
     display: flex;
@@ -1314,6 +1316,10 @@ margin-bottom: 2rem;
     text-align: center;
     padding: 1rem 1.25rem;
   }
+  .about__box2 {
+    text-align: center;
+    padding: 1rem 1.25rem;
+}
   .areabutton{
     width: 100%;
     display: flex;
@@ -1400,7 +1406,6 @@ input[type="text"],input[type="password"]{
 	margin-top: 10px;
 	height: 45px;
 	width: 360px;
-  border: #fff;
   border-radius: 8px;
 	font-size: 18px;
 	margin-bottom: 20px;
@@ -1493,4 +1498,230 @@ input[type="text"],input[type="password"]{
     margin: 0px 60px 20px;
     height: 1.75px;
   background-color: var(--first-color);
+}
+.TypeUser{
+  color: var(--first-color);
+}
+
+
+.Profile{
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  border: 1px solid #fa9486;
+}
+table{
+  border-collapse: collapse;
+  text-align: center;
+  
+}
+th{
+  padding: 10px;
+  font-size: 14px;
+
+}
+td{
+  border: 1px solid black;
+  padding: 10px;
+  font-size: 14px;
+}
+.header_fixed{
+  height: 500px;
+  width: fit-content;
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+  border-spacing: 0;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  border: 1px solid black;
+  border-radius: 12px 12px 0 0 ;
+  overflow-x: hidden;
+  box-shadow: 0 12px 5px rgba(32,32,32,.3)
+}
+.header_fixed thead th{
+  position: sticky;
+  color: #fff;
+  top: 0;
+  font-size: 15px;
+  font-weight: 800;
+  background-color: #fa9486;
+
+}
+::-webkit-scrollbar-track{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+}
+.show_text{
+  height: 25px;
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #ffffff;
+  border : 1px solid #fa9486;
+  border-radius: 12px;
+  text-align: center;
+}
+.name_box{
+  text-align: start;
+}
+.textshow_approve{
+  height: 35px;
+  width: auto;
+  border-radius: 9px;
+  padding: 7px 25px;
+  text-align: center;
+  background:#92d050;
+}
+.test{
+  height: 100px;
+  width: 100px;
+  background: white ;
+}
+.info{
+  border: none;
+
+  text-align: start;
+}
+.headInfo{
+  
+  width: 100%;
+  font-size: 15px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+.columName{
+  height: 500px;
+  width: 100%;
+  margin-top: 40px;
+}
+.columApprove{
+  height: 500px;
+  width: 100%;
+  margin-top: 40px;
+}
+.columIntern{
+  margin-top: 20px;
+  height: 500px;
+  width: 100%;
+  
+}
+
+.columNameRow2{
+  width: 100%;
+  margin-top: 26px;
+}
+.columInternRow2{
+  width: 100%;
+  margin-top: 58px;
+}
+.columApproveRow2{
+  
+  width: 100%;
+  margin-top: 26px;
+}
+.columApproveRow2Top{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+.show_textflexbox1{
+  height: 25px;
+  width: auto;
+  margin-bottom: 63px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #ffffff;
+  border : 1px solid #fa9486;
+  border-radius: 12px;
+  text-align: center;
+}
+.show_textflexbox2{
+  height: 25px;
+  width: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #ffffff;
+  border : 1px solid #fa9486;
+  border-radius: 12px;
+  text-align: center;
+}
+.show_textDoc{
+  height: auto;
+  width: auto;
+  background: #ffffff;
+  border : 1px solid #fa9486;
+  border-radius: 12px;
+  text-align: start;
+  padding: 7px 20px;
+}
+.line{
+  height: 1px; 
+  width: 100%; 
+  background-color: black; 
+  margin-bottom: 15px;
+}
+.lineC{
+  height: 1px; 
+  width: 100%; 
+  background-color: #fa9486; 
+  margin-bottom: 15px;
+}
+.hover{
+  transition: all .2s ease-in;
+  cursor: pointer;
+}
+.hover:hover{
+  background-color: #FFA0A3;
+  transform: scale(1.02);
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.2), -1px -1px 8px rgba(0,0,0,0.2);
+}
+tr:nth-child(odd){
+  background: #FFC0B6;
+}
+tr:nth-child(even){
+  background: #FFF3EF;
+}
+.dropdown{
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  margin-top: 25px;
+}
+
+
+
+
+.contact__container1 {
+  column-gap: 0rem;
+}
+.contact__container1 {
+  grid-template-columns: repeat(2, max-content);
+  justify-content: center;
+  column-gap: 3.55rem;
+}
+.contact__container1 {
+  row-gap: 3rem;
+  padding-bottom: 3rem;
+}
+.test {
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0px 120px;
+}
+.test4 {
+  width: 100%;
+  flex-direction: row;
+  display: flex;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  color: black;
+}
+.buttoncompany{
+  margin-left: 60px;
 }
