@@ -1,8 +1,15 @@
+<?php
+$key = $_GET['key'];
+require_once("models/Company.php");
+$CompanyList = Company::search($key);
+require_once('css/teacher.php');
+?>
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
     <!--================= FAVICON =================-->
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
@@ -19,6 +26,7 @@
 
     <title> Online Internship Management Systems </title>
 </head>
+
 <body>
     <!--==============HEADER==============Online Internship Management Systems-->
     <header class="header" id="header">
@@ -35,7 +43,7 @@
 
                     <li class="nav__item">
                         <a href="#about" class="nav__link">
-                            <i class='bx bxs-user' ></i>
+                            <i class='bx bxs-user'></i>
                         </a>
                     </li>
 
@@ -47,7 +55,7 @@
 
                     <li class="nav__item">
                         <a href="#work" class="nav__link">
-                            <i class='bx bx-briefcase-alt-2' ></i>
+                            <i class='bx bx-briefcase-alt-2'></i>
                         </a>
                     </li>
 
@@ -68,63 +76,64 @@
             </div>
         </nav>
     </header>
- 
+
     <!--==============MAIN==============-->
     <main class="main">
-            <!--==============HOME==============-->
-            <section class="home section" id="home">
-                <div class="home__container container grid">
-                    <div class="home__data">
-                        <span class="home__greeting">Hello, This is</span>
-                        <h1 class="home__name">Online internship</h1>
-                        <h1 class="home__name"> management system</h1>
-                        <div class="line__title"></div>
-                        <h3 class="home__education">Welcome <?php echo "$Info->Name";?></h3>
+        <!--==============HOME==============-->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__data">
+                    <span class="home__greeting">Hello, This is</span>
+                    <h1 class="home__name">Online internship</h1>
+                    <h1 class="home__name"> management system</h1>
+                    <div class="line__title"></div>
+                    <h3 class="home__education">Welcome <?php echo "$Info->Name"; ?></h3>
 
-                    </div>
-                   
-                    <div class="home__handle">
-                        <img src="img/home.png" alt="" class="home__img">
-                    </div>
+                </div>
 
-                    <div class="home__social">
-                        <a href="https://www.linkedin.com/" target="_blank" class="home__social-link">
-                            <i class='bx bxl-linkedin-square' ></i>
-                        </a>
-                        <a href="https://github.com/" target="_blank" class="home__social-link">
-                            <i class='bx bxl-github' ></i>
-                        </a>
-                        <a href="https://dribble.com/" target="_blank" class="home__social-link">
-                            <i class='bx bxl-dribbble'></i>
-                        </a>
-                    </div>
+                <div class="home__handle">
+                    <img src="img/home.png" alt="" class="home__img">
+                </div>
 
-                    <a href="#Announcements" class="home__scroll">
-                        <i class='bx bx-mouse home__scroll-icon' ></i>
-                        <span class="home__scroll-name">Scroll Down</span>
-
+                <div class="home__social">
+                    <a href="https://www.linkedin.com/" target="_blank" class="home__social-link">
+                        <i class='bx bxl-linkedin-square'></i>
                     </a>
-                </div>   
-            </section>
+                    <a href="https://github.com/" target="_blank" class="home__social-link">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                    <a href="https://dribble.com/" target="_blank" class="home__social-link">
+                        <i class='bx bxl-dribbble'></i>
+                    </a>
+                </div>
 
-            <!--==============SERVICES==============-->
+                <a href="#Announcements" class="home__scroll">
+                    <i class='bx bx-mouse home__scroll-icon'></i>
+                    <span class="home__scroll-name">Scroll Down</span>
+
+                </a>
+            </div>
+        </section>
+
+        <!--==============SERVICES==============-->
         <section class="services section" id="Announcements">
             <span class="section__subtitle">The University</span>
             <h2 class="section__title">Announcement</h2>
 
             <div class="services__container container grid">
                 <div class="services__card">
-                    <h3 class="services__title"><?php echo "$AnnouncementlistOne->ANMCompanyName";?></h3>
+                    <h3 class="services__title"><?php echo "$AnnouncementlistOne->ANMCompanyName"; ?></h3>
                     <div class="line__social"></div>
-                    <h4 class="services__inside"><?php echo "$AnnouncementlistOne->ANMBriefDescription";?>
-                        <br><br>👉 <?php echo "$AnnouncementlistOne->ANMTimeDescription";?></h4>
+                    <h4 class="services__inside"><?php echo "$AnnouncementlistOne->ANMBriefDescription"; ?>
+                        <br><br>👉 <?php echo "$AnnouncementlistOne->ANMTimeDescription"; ?>
+                    </h4>
 
                     <div class="areabutton1">
                         <span class="betweenbutton">
-                           <i class='bx bx-trash'></i>
+                            <i class='bx bx-trash'></i>
                         </span>
                         <span class="services__button button">
-                            See more <i class='bx bx-right-arrow-alt services__icon' ></i>
+                            See more <i class='bx bx-right-arrow-alt services__icon'></i>
                         </span>
                         <span class="betweenbutton">
                             <i class='bx bxs-edit'></i>
@@ -133,12 +142,12 @@
 
                     <div class="services__modal">
                         <div class="services__modal-content">
-                            <i class='bx bx-x services__modal-close' ></i>
+                            <i class='bx bx-x services__modal-close'></i>
 
-                            <h3 class="services__modal-title"><?php echo "$AnnouncementlistOne->ANMCompanyName";?></h3>
+                            <h3 class="services__modal-title"><?php echo "$AnnouncementlistOne->ANMCompanyName"; ?></h3>
                             <div class="line__social"></div>
                             <p class="services__modal-description">
-                                <?php echo "$AnnouncementlistOne->ANMFullDescription";?>
+                                <?php echo "$AnnouncementlistOne->ANMFullDescription"; ?>
                             </p>
 
                         </div>
@@ -146,17 +155,18 @@
                 </div>
 
                 <div class="services__card">
-                    <h3 class="services__title"><?php echo "$AnnouncementlistTwo->ANMCompanyName";?></h3>
+                    <h3 class="services__title"><?php echo "$AnnouncementlistTwo->ANMCompanyName"; ?></h3>
                     <div class="line__social"></div>
-                    <h4 class="services__inside"><?php echo "$AnnouncementlistTwo->ANMBriefDescription";?>
-                        <br><br>👉 <?php echo "$AnnouncementlistTwo->ANMTimeDescription";?></h4>
+                    <h4 class="services__inside"><?php echo "$AnnouncementlistTwo->ANMBriefDescription"; ?>
+                        <br><br>👉 <?php echo "$AnnouncementlistTwo->ANMTimeDescription"; ?>
+                    </h4>
 
                     <div class="areabutton1">
                         <span class="betweenbutton">
-                           <i class='bx bx-trash'></i>
+                            <i class='bx bx-trash'></i>
                         </span>
                         <span class="services__button button">
-                            See more <i class='bx bx-right-arrow-alt services__icon' ></i>
+                            See more <i class='bx bx-right-arrow-alt services__icon'></i>
                         </span>
                         <span class="betweenbutton">
                             <i class='bx bxs-edit'></i>
@@ -165,12 +175,12 @@
 
                     <div class="services__modal">
                         <div class="services__modal-content">
-                            <i class='bx bx-x services__modal-close' ></i>
+                            <i class='bx bx-x services__modal-close'></i>
 
-                            <h3 class="services__modal-title"><?php echo "$AnnouncementlistTwo->ANMCompanyName";?></h3>
+                            <h3 class="services__modal-title"><?php echo "$AnnouncementlistTwo->ANMCompanyName"; ?></h3>
                             <div class="line__social"></div>
                             <p class="services__modal-description">
-                                <?php echo "$AnnouncementlistTwo->ANMFullDescription";?>
+                                <?php echo "$AnnouncementlistTwo->ANMFullDescription"; ?>
                             </p>
 
                         </div>
@@ -178,17 +188,18 @@
                 </div>
 
                 <div class="services__card">
-                    <h3 class="services__title"><?php echo "$AnnouncementlistThree->ANMCompanyName";?></h3>
+                    <h3 class="services__title"><?php echo "$AnnouncementlistThree->ANMCompanyName"; ?></h3>
                     <div class="line__social"></div>
-                    <h4 class="services__inside"><?php echo "$AnnouncementlistThree->ANMBriefDescription";?>
-                        <br><br>👉 <?php echo "$AnnouncementlistThree->ANMTimeDescription";?></h4>
+                    <h4 class="services__inside"><?php echo "$AnnouncementlistThree->ANMBriefDescription"; ?>
+                        <br><br>👉 <?php echo "$AnnouncementlistThree->ANMTimeDescription"; ?>
+                    </h4>
 
                     <div class="areabutton1">
                         <span class="betweenbutton">
-                           <i class='bx bx-trash'></i>
+                            <i class='bx bx-trash'></i>
                         </span>
                         <span class="services__button button">
-                            See more <i class='bx bx-right-arrow-alt services__icon' ></i>
+                            See more <i class='bx bx-right-arrow-alt services__icon'></i>
                         </span>
                         <span class="betweenbutton">
                             <i class='bx bxs-edit'></i>
@@ -197,12 +208,12 @@
 
                     <div class="services__modal">
                         <div class="services__modal-content">
-                            <i class='bx bx-x services__modal-close' ></i>
+                            <i class='bx bx-x services__modal-close'></i>
 
-                            <h3 class="services__modal-title"><?php echo "$AnnouncementlistThree->ANMCompanyName";?></h3>
+                            <h3 class="services__modal-title"><?php echo "$AnnouncementlistThree->ANMCompanyName"; ?></h3>
                             <div class="line__social"></div>
                             <p class="services__modal-description">
-                                <?php echo "$AnnouncementlistThree->ANMFullDescription";?>
+                                <?php echo "$AnnouncementlistThree->ANMFullDescription"; ?>
                             </p>
 
                         </div>
@@ -212,96 +223,110 @@
         </section>
 
         <section class="testimonial section" id="Internship">
-                <span class="section__subtitle">Find All</span>
-                <h2 class="section__title">INTERNSHIP</h2>
+            <span class="section__subtitle">Find All</span>
+            <h2 class="section__title">INTERNSHIP</h2>
 
-                <div class="search">Search</div>
+            <div class="search">Search
+                <label>
+                    <form method="get" action="">
+                        <input type="text" name="key" placeholder="Search here">
+                        <button type="submit" name="action" value="search">
+                            <ion-icon name="search-sharp"></ion-icon>
+                        </button>
+                    </form>
+                </label>
+            </div>
 
-                <div class="testimonial__container container swiper">
-                    <div class="swiper-wrapper">
-                        <div class="testimonial__card swiper-slide">
-                            <div class="areabutton1">
-                                <img src="img/testimonial1.png" alt="" class="testimonial__img">
-                            </div>
-                            <div class="line__social"></div>
-                            <h3 class="testimonial__name">Microsoft</h3>
-                            <p class="testimonial__description">
-                                Programmer, Software Engineer, Hardware Engineer
-                            </p>
-                        </div>
-                        <div class="testimonial__card swiper-slide">
+            <div class="testimonial__container container swiper">
+                <div class="swiper-wrapper">
+                    <div class="testimonial__card swiper-slide">
+                        <div class="areabutton1">
                             <img src="img/testimonial1.png" alt="" class="testimonial__img">
-
-                           <h3 class="testimonial__name">Microsoft</h3>
-                           <p class="testimonial__description">
-                                Programmer, Software Engineer, Hardware Engineer
-                           </p>
                         </div>
+                        <div class="line__social"></div>
+                        <h3 class="testimonial__name">Microsoft</h3>
+                        <p class="testimonial__description">
+                            Programmer, Software Engineer, Hardware Engineer
+                        </p>
+                    </div>
+                    <div class="testimonial__card swiper-slide">
+                        <img src="img/testimonial1.png" alt="" class="testimonial__img">
 
-                        <div class="testimonial__card swiper-slide">
-                            <img src="img/testimonial2.png" alt="" class="testimonial__img">
+                        <h3 class="testimonial__name">Microsoft</h3>
+                        <p class="testimonial__description">
+                            Programmer, Software Engineer, Hardware Engineer
+                        </p>
+                    </div>
 
-                           <h3 class="testimonial__name">Paula Vusy</h3>
-                           <p class="testimonial__description">
-                               A really good jop,all aspects of the project were
-                               followed step by step and with good results.
-                           </p>
+                    <div class="testimonial__card swiper-slide">
+                        <img src="img/testimonial2.png" alt="" class="testimonial__img">
+
+                        <h3 class="testimonial__name">Paula Vusy</h3>
+                        <p class="testimonial__description">
+                            A really good jop,all aspects of the project were
+                            followed step by step and with good results.
+                        </p>
+                    </div>
+
+                    <div class="testimonial__card swiper-slide">
+                        <img src="img/testimonial3.png" alt="" class="testimonial__img">
+
+                        <h3 class="testimonial__name">Sara cill</h3>
+                        <p class="testimonial__description">
+                            A really good jop,all aspects of the project were
+                            followed step by step and with good results.
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+
+        <section class="about section" id="Profile">
+            <h2 class="section__title"><?php echo "$Info->Name $Info->LastName"; ?></h2>
+            <div class="line__title"></div>
+
+            <div class="container profile__container">
+                <img src="img/myprofile.jpg" alt="" class="about__img">
+
+                <div class="about__data">
+
+                    <div class="about__setup">
+                        <h4 class="title__boxcheck">Unapproved</h4>
+                        <h4 class="title__boxcheck">Approved</h4>
+                    </div>
+
+                    <div class="about__setup">
+                        <div class="about__boxcheck">
+                            <h3 class="about__titleinside titleinsidemain"><?php $Number = 62 - $ShowApproved; echo "$Number"; ?></h3>
                         </div>
-
-                        <div class="testimonial__card swiper-slide">
-                            <img src="img/testimonial3.png" alt="" class="testimonial__img">
-
-                           <h3 class="testimonial__name">Sara cill</h3>
-                           <p class="testimonial__description">
-                               A really good jop,all aspects of the project were
-                               followed step by step and with good results.
-                           </p>
+                        <div class="about__boxloadcheck">
+                            <h3 class="about__titleinside titleinsidewhite noleft"><?php echo "$ShowApproved"; ?></h3>
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </section>
 
 
-            <section class="about section" id="Profile">
-                <h2 class="section__title"><?php echo "$Info->Name $Info->LastName";?></h2>
-                <div class="line__title"></div>
+                    <div class="ProfileLine"></div>
 
-                <div class="about__container container grid">
-                    <img src="img/myprofile.jpg" alt="" class="about__img">
-                  
-                    <div class="about__data">
-                        <div class="about__info">
-                            <div class="about__box">
-                                <i class='bx bx-award about__icon' ></i>
-                                <h3 class="about__title">Experience</h3>
-                                <span class="about__subtitle">8 Years Working</span>
-                            </div>
-
-                            <div class="about__box">
-                                <i class='bx bx-briefcase-alt about__icon' ></i>
-                                <h3 class="about__title">Completed</h3>
-                                <span class="about__subtitle">48 + Projects</span>
-                            </div>
-
-                            <div class="about__box">
-                                <i class='bx bx-support about__icon' ></i>
-                                <h3 class="about__title">Support</h3>
-                                <span class="about__subtitle">Online 24/7</span>
-                            </div>
+                    <div class="about__setup">
+                        <div class="about__boxload">
+                            <h3 class="about__titleinside titleinsidewhite noleft2">Report</h3>
                         </div>
-
-                        <p class="about__description">
-                            Frontend developer, I create web pages with UI / UX userint
-                            I have years of experience and many clients are happy
-                            with the projects carried out.
-                        </p>
-
-                        <a href="#contact" class="button">Contact</a>
-                     </div>
+                    </div>
+                    <div class="about__setup">
+                        <a class="about__boxloadEx2">
+                        <i class='bx bx-chevron-down bx-lg iconnosee'></i>
+                            <h3 class="about__titleinside titleinsidewhite noleft2">Upload</h3>
+                            <i class='bx bx-chevron-down bx-lg'></i>
+                        </a>
+                    </div>
                 </div>
-            </section>
-<!--
+            </div>
+            </div>
+        </section>
+
+        <!--
             <section class="skills section" id="skills">
                 <span class="section__subtitle">My abilities</span>
                 <h2 class="section__title">My Experience</h2>
@@ -447,7 +472,7 @@
                     <h3 class="work__title">Web design</h3>
 
                     <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow-alt work__icon' ></i>
+                        Demo <i class='bx bx-right-arrow-alt work__icon'></i>
                     </a>
                 </div>
 
@@ -457,7 +482,7 @@
                     <h3 class="work__title">App movil</h3>
 
                     <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow-alt work__icon' ></i>
+                        Demo <i class='bx bx-right-arrow-alt work__icon'></i>
                     </a>
                 </div>
 
@@ -467,7 +492,7 @@
                     <h3 class="work__title">Brand design</h3>
 
                     <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow-alt work__icon' ></i>
+                        Demo <i class='bx bx-right-arrow-alt work__icon'></i>
                     </a>
                 </div>
 
@@ -477,7 +502,7 @@
                     <h3 class="work__title">Web design</h3>
 
                     <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow-alt work__icon' ></i>
+                        Demo <i class='bx bx-right-arrow-alt work__icon'></i>
                     </a>
                 </div>
 
@@ -487,12 +512,12 @@
                     <h3 class="work__title">App movil</h3>
 
                     <a href="#" class="work__button">
-                        Demo <i class='bx bx-right-arrow-alt work__icon' ></i>
+                        Demo <i class='bx bx-right-arrow-alt work__icon'></i>
                     </a>
                 </div>
             </div>
         </section>
-<!--
+        <!--
             <section class="contact section" id="contact">
                 <span class="section__subtitle">Get in touch</span>
                 <h2 class="section__title">Contact Me</h2>
@@ -560,54 +585,56 @@
             </section>-->
     </main>
 
-        <!--==============FOOTER==============-->
-        <footer class="footer">
-            <div class="footer__container container">
-                <ul class="footer__list">
-                    <li>
-                        <a href="#home" class="footer__link">Home</a>
-                    </li>
-                    <li>
-                        <a href="#Announcements" class="footer__link">Announcements</a>
-                    </li>
-                    <li>
-                        <a href="#Internship" class="footer__link">Internship</a>
-                    </li>
-                    <li>
-                        <a href="#Profile" class="footer__link">Profile</a>
-                    </li>
-                </ul>
+    <!--==============FOOTER==============-->
+    <footer class="footer">
+        <div class="footer__container container">
+            <ul class="footer__list">
+                <li>
+                    <a href="#home" class="footer__link">Home</a>
+                </li>
+                <li>
+                    <a href="#Announcements" class="footer__link">Announcements</a>
+                </li>
+                <li>
+                    <a href="#Internship" class="footer__link">Internship</a>
+                </li>
+                <li>
+                    <a href="#Profile" class="footer__link">Profile</a>
+                </li>
+            </ul>
 
-                <div class="line__social"></div>
+            <div class="line__social"></div>
 
-                <ul class="footer__social">
-                    <a href="https://www.facebook.com" target="_blank" class="footer__social-link">
-                        <i class='bx bxl-microsoft-teams'></i>
-                    </a>
-                    <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
-                        <i class='bx bxl-instagram-alt'></i>
-                    </a>
-                    <a href="https://www.facebook.com" target="_blank" class="footer__social-link">
-                        <i class='bx bxl-facebook-circle'></i>  
-                    </a>
-                </ul>
+            <ul class="footer__social">
+                <a href="https://www.facebook.com" target="_blank" class="footer__social-link">
+                    <i class='bx bxl-microsoft-teams'></i>
+                </a>
+                <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
+                    <i class='bx bxl-instagram-alt'></i>
+                </a>
+                <a href="https://www.facebook.com" target="_blank" class="footer__social-link">
+                    <i class='bx bxl-facebook-circle'></i>
+                </a>
+            </ul>
 
-                <span class="footer__copy">
-                    &#169; BoonyaratFC. All rights reserved
-                </span>
-            </div>
-        </footer>
+            <span class="footer__copy">
+                &#169; BoonyaratFC. All rights reserved
+            </span>
+        </div>
+    </footer>
 
-        <!--============== SCROLLREVEAL ==============-->
-        <script src="js/scrollreveal.min.js"></script>
+    <!--============== SCROLLREVEAL ==============-->
+    <script src="js/scrollreveal.min.js"></script>
 
-        <!--============== SWIPER JS ==============-->
-        <script src="js/swiper-bundle.min.js"></script>
+    <!--============== SWIPER JS ==============-->
+    <script src="js/swiper-bundle.min.js"></script>
 
-        <!--============== MIXITUP FILTER ===========-->
-        <script src="js/mixitup.min.js"></script>
+    <!--============== MIXITUP FILTER ===========-->
+    <script src="js/mixitup.min.js"></script>
 
-        <!--============= MAIN JS==================-->
-        <script src="js/main.js"></script>
-    </body>
+    <!--============= MAIN JS==================-->
+    <script src="js/main.js"></script>
+    
+</body>
+
 </html>

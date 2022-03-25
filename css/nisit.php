@@ -117,7 +117,7 @@ include 'filesLogic.php';
                     <a href="https://www.linkedin.com/" target="_blank" class="home__social-link">
                         <i class='bx bxl-linkedin-square'></i>
                     </a>
-                    <a href="https://github.com/" target="_blank" class="home__social-link">
+                    <a href="https://github.com/samthanakorn/se204372.git" target="_blank" class="home__social-link">
                         <i class='bx bxl-github'></i>
                     </a>
                     <a href="https://dribble.com/" target="_blank" class="home__social-link">
@@ -242,37 +242,39 @@ include 'filesLogic.php';
                     <h4 class="about__title" id="TitlePetition">Your Internship documents isn't upload</h4>
                     <div class="about__box">
                         <i class='bx bxs-x-circle'></i>
-                        <h3 class="about__titleinside">Internship Completed</h3>
-                        <i class='bx bxs-x-circle bx-lg iconshow'></i>
+                        <h3 class="about__titleinside" id="StatusPetition">Internship InCompleted</h3>
+                        <!--<i class='bx bxs-x-circle bx-lg iconshow'></i>-->
+                        <img src="icons/close.png" alt="" srcset="" class="iconInternship" id="IconChange" />
+
                     </div>
 
                     <div class="about__setup">
-                        <select class="about__boxload about__titleinside titleinsidewhite">
-                            <option>Download</option>
-                            <option value="/oism.pdf">OISM Document</option>
-                            <option value="/test.pdf">PDF Document</option>
-                        </select>
-                        <div class="about__boxload">
+                        <!--<select class="about__boxload about__titleinside titleinsidewhite">
+                            <option class="about__titleinside titleinsidewhite">Download</option>
+                            <option class="about__titleinside titleinsidewhite" value="/oism.pdf">OISM Document</option>
+                            <option class="about__titleinside titleinsidewhite" value="/test.pdf">PDF Document</option>
+                        </select>-->
+                        <a href="pdf/oism.pdf" download="Online Internship Management System" class="about__boxload">
                             <h3 class="about__titleinside titleinsidewhite">Download</h3>
                             <i class='bx bx-chevron-down bx-lg iconload'></i>
-                        </div>
-                        <!--<div class="about__boxload">
+                        </a>
+                        <a class="about__boxload">
                             <h3 class="about__titleinside titleinsidewhite">Upload</h3>
                             <i class='bx bx-chevron-down bx-lg iconload'></i>
-                        </div>-->
+                        </a>
                     </div>
 
                     <a href="test.php">Go</a>
-                    <form action="#" method="POST">
+                    <!--<form action="#" method="POST">
                         <h3>Upload Files</h3>
                         <input type="file" name="myfile"><br>
                         <button type="submit" name="upload">Upload</button>
                     </form>
                     <select name="download" onChange="download(this.value)">
                         <option>Select document</option>
-                        <option value="/oism.pdf">OISM Document</option>
-                        <option value="/test.pdf">PDF Document</option>
-                    </select>
+                        <option value="/pdf/oism.pdf">OISM Document</option>
+                        <option value="/pdf/test.pdf">PDF Document</option>
+                    </select>-->
                 </div>
             </div>
             </div>
@@ -821,7 +823,7 @@ include 'filesLogic.php';
             <div class="line__social"></div>
 
             <ul class="footer__social">
-                <a href="https://www.facebook.com" target="_blank" class="footer__social-link">
+                <a href="https://teams.microsoft.com/l/channel/19%3a3996cc80c9dc4006a80079d5ebe970f1%40thread.tacv2/SE%2520DARN%2520TURN?groupId=b0d067d6-8d90-4b7a-ad0d-ec8bf19a5215&tenantId=8c1832ea-a96d-413e-bf7d-9fe4d608e00b" target="_blank" class="footer__social-link">
                     <i class='bx bxl-microsoft-teams'></i>
                 </a>
                 <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
@@ -856,28 +858,36 @@ include 'filesLogic.php';
         const VerifyPetition = document.getElementById("Verify");
         const ApprovePetition = document.getElementById("Approve");
         const TextPetition = document.getElementById("TitlePetition");
+        const StatusPetitionShow = document.getElementById("StatusPetition");
+        const IconPetition = document.getElementById("IconChange");
         const MainColor = "#ffbab3";
 
-        function download(d) {
+        /*function download(d) {
             if (d == 'Select document') return;
             window.location = 'http://example.com' + d;
-        }
+        }*/
 
         switch ("<?php echo $FilePetition->Status; ?>") {
             case "Receive":
                 ReceivePetition.style.backgroundColor = MainColor;
                 TextPetition.innerHTML = "The Committee is received";
+                StatusPetitionShow.innerHTML = "Internship Considering";
+                IconPetition.src = "icons/consider.png"
                 break;
             case "Consider":
                 ReceivePetition.style.backgroundColor = MainColor;
                 ConsiderPetition.style.backgroundColor = MainColor;
                 TextPetition.innerHTML = "The Committee is considering";
+                StatusPetitionShow.innerHTML = "Internship Considering";
+                IconPetition.src = "icons/consider.png"
                 break;
             case "Verify":
                 ReceivePetition.style.backgroundColor = MainColor;
                 ConsiderPetition.style.backgroundColor = MainColor;
                 VerifyPetition.style.backgroundColor = MainColor;
                 TextPetition.innerHTML = "The Committee is verifying";
+                StatusPetitionShow.innerHTML = "Internship Considering";
+                IconPetition.src = "icons/consider.png"
                 break;
             case "Approve":
                 ReceivePetition.style.backgroundColor = MainColor;
@@ -885,9 +895,29 @@ include 'filesLogic.php';
                 VerifyPetition.style.backgroundColor = MainColor;
                 ApprovePetition.style.backgroundColor = MainColor;
                 TextPetition.innerHTML = "The Committee is approved";
+                StatusPetitionShow.innerHTML = "Internship Complete";
+                IconPetition.src = "icons/correct.png"
                 break;
             default:
                 ;
+        }
+
+        function download() {
+            axios({
+                    url: 'https://source.unsplash.com/random/500x500',
+                    method: 'GET',
+                    responseType: 'blob'
+                })
+                .then((response) => {
+                    const url = window.URL
+                        .createObjectURL(new Blob([response.data]));
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.setAttribute('download', 'image.jpg');
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                })
         }
     </script>
 </body>

@@ -31,6 +31,7 @@ if(isset($_POST['username'])){
             $AnnouncementlistOne = Announcement::get(0, 1);
             $AnnouncementlistTwo = Announcement::get(1, 1);
             $AnnouncementlistThree = Announcement::get(2, 2);
+            $ShowApproved = Petition::CheckApproved();
             require_once('css/teacher.php');
         }
         else 

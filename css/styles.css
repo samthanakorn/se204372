@@ -542,6 +542,59 @@ transition: .4s; /* for light mode animation */
     align-items: center;
 }
 
+.about__boxloadEx2{
+  width: 92.5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-style: solid;
+    border-color: var(--first-color);
+    border-radius: 0.75rem;
+    background-color: var(--first-color);
+    padding: 1rem 1rem;
+    margin: 20px;
+    align-items: center;
+}
+
+.about__boxloadcheck{
+  width: 100%;
+  height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: var(--first-color);
+    border-style: solid;
+    border-color: var(--first-color);
+    border-radius: 0.75rem;
+    padding: 1rem 1rem;
+    margin: 20px;
+    align-items: center;
+}
+
+.about__boxcheck{
+  width: 100%;
+  height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-style: solid;
+    border-color: var(--first-color);
+    border-radius: 0.75rem;
+    padding: 1rem 1rem;
+    margin: 20px;
+    align-items: center;
+}
+.title__boxcheck{
+  width: 100%;
+  color: var(--container-color);
+  font-size: 26px;
+}
+
+.about__boxload:hover,
+.about__boxloadEx2:hover{
+  background-color: hsl(6, 100%, 80%);
+}
+
 .about__icon{
   font-size: 1.5rem;
   color: var(--first-color);
@@ -557,11 +610,26 @@ transition: .4s; /* for light mode animation */
   color: var(--container-color);
   font-size: 26px;
   font-family: var(--body-font);
-  /*margin-left: 12px;*/
+  margin-left: 12px;
   font-weight: bold;
 }
+
+.titleinsidemain{
+  color: var(--first-color);
+  margin-left: 0px;
+  font-size: 53px;
+}
+
 .titleinsidewhite{
   color: white;
+}
+
+.noleft{
+  font-size: 53px;
+  margin-left: 0px;
+}
+.noleft2{
+  margin-left: 0px;
 }
 
 .about__subttile{
@@ -665,6 +733,19 @@ transition: .4s; /* for light mode animation */
 
 /* Services modal */
 .services__modal{
+  position: fixed;
+  inset: 0;
+  background-color: hsla(0, 0%, 0%, .45);
+  padding: 2rem 1rem;
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: .4s;
+  z-index: var(--z-modal);
+}
+
+.deletemodal{
   position: fixed;
   inset: 0;
   background-color: hsla(0, 0%, 0%, .45);
@@ -1376,6 +1457,10 @@ input[type="text"],input[type="password"]{
   color: red;
 }
 
+.iconnosee{
+  color: transparent;
+}
+
 .wizard{
   display: flex;
   flex-direction: row;
@@ -1395,5 +1480,17 @@ input[type="text"],input[type="password"]{
 .LineTo{
   height: 3.75px;
   width: 16%;
+  background-color: var(--first-color);
+}
+
+.iconInternship{
+  width: 40px;
+  height: 40px;
+}
+
+.ProfileLine{
+  width: auto;
+    margin: 0px 60px 20px;
+    height: 1.75px;
   background-color: var(--first-color);
 }
