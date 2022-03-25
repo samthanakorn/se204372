@@ -246,7 +246,8 @@ require_once('css/teacher.php');
                             <h3 class="testimonial__description__three">ลักษณะ<br>งาน</h3>
                             <div class="VerticalLine"></div>
                             <h3 class="testimonial__description__four">ออกแบบหน้าตา Mobile App และ Website Page
-                                <br>ช่วยประกอบ Hardware ในส่วนของภายใน</h3>
+                                <br>ช่วยประกอบ Hardware ในส่วนของภายใน
+                            </h3>
                         </div>
                         <div class="Horizontal">
                             <div class="Vertical">
@@ -273,10 +274,32 @@ require_once('css/teacher.php');
                             <img src="img/testimonial1.png" alt="" class="testimonial__img">
                         </div>
                         <div class="line__social"></div>
-                        <h3 class="testimonial__name">Microsoft</h3>
+                        <h3 class="testimonial__name"><?php echo "$CompanyDetailOne->CPName"; ?></h3>
                         <p class="testimonial__description">
                             Programmer, Software Engineer, Hardware Engineer
                         </p>
+                        <div class="PetitionBox">
+                            <h3 class="testimonial__description__three">ลักษณะ<br>งาน</h3>
+                            <div class="VerticalLine"></div>
+                            <h3 class="testimonial__description__four"><?php echo "$CompanyDetailOne->CPNatureOfWork"; ?></h3>
+                        </div>
+                        <div class="Horizontal">
+                            <div class="Vertical">
+                                <div class="Horizontal">
+                                    <i class='bx bx-phone'></i>
+                                    <h3 class="testimonial__description__three"><?php echo "$CompanyDetailOne->CPPhone"; ?></h3>
+                                </div>
+                                <div class="Horizontal">
+                                    <i class='bx bx-envelope'></i>
+                                    <h3 class="testimonial__description__three"><?php echo "$CompanyDetailOne->CPEmail"; ?></h3>
+                                </div>
+                            </div>
+                            <div class="areabutton2">
+                                <span class="services__button">
+                                    <button class="btn-4">ยื่นคำ<br>ร้อง</button>
+                                </span>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="testimonial__card swiper-slide">
@@ -284,10 +307,32 @@ require_once('css/teacher.php');
                             <img src="img/testimonial1.png" alt="" class="testimonial__img">
                         </div>
                         <div class="line__social"></div>
-                        <h3 class="testimonial__name">Microsoft</h3>
+                        <h3 class="testimonial__name"><?php echo "$CompanyDetailTwo->CPName"; ?></h3>
                         <p class="testimonial__description">
                             Programmer, Software Engineer, Hardware Engineer
                         </p>
+                        <div class="PetitionBox">
+                            <h3 class="testimonial__description__three">ลักษณะ<br>งาน</h3>
+                            <div class="VerticalLine"></div>
+                            <h3 class="testimonial__description__four"><?php echo "$CompanyDetailTwo->CPNatureOfWork"; ?></h3>
+                        </div>
+                        <div class="Horizontal">
+                            <div class="Vertical">
+                                <div class="Horizontal">
+                                    <i class='bx bx-phone'></i>
+                                    <h3 class="testimonial__description__three"><?php echo "$CompanyDetailTwo->CPPhone"; ?></h3>
+                                </div>
+                                <div class="Horizontal">
+                                    <i class='bx bx-envelope'></i>
+                                    <h3 class="testimonial__description__three"><?php echo "$CompanyDetailTwo->CPEmail"; ?></h3>
+                                </div>
+                            </div>
+                            <div class="areabutton2">
+                                <span class="services__button">
+                                    <button class="btn-4">ยื่นคำ<br>ร้อง</button>
+                                </span>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="testimonial__card swiper-slide">
@@ -295,11 +340,34 @@ require_once('css/teacher.php');
                             <img src="img/testimonial1.png" alt="" class="testimonial__img">
                         </div>
                         <div class="line__social"></div>
-                        <h3 class="testimonial__name">Microsoft</h3>
+                        <h3 class="testimonial__name"><?php echo "$CompanyDetailThree->CPName"; ?></h3>
                         <p class="testimonial__description">
                             Programmer, Software Engineer, Hardware Engineer
                         </p>
+                        <div class="PetitionBox">
+                            <h3 class="testimonial__description__three">ลักษณะ<br>งาน</h3>
+                            <div class="VerticalLine"></div>
+                            <h3 class="testimonial__description__four"><?php echo "$CompanyDetailThree->CPNatureOfWork"; ?></h3>
+                        </div>
+                        <div class="Horizontal">
+                            <div class="Vertical">
+                                <div class="Horizontal">
+                                    <i class='bx bx-phone'></i>
+                                    <h3 class="testimonial__description__three"><?php echo "$CompanyDetailThree->CPPhone"; ?></h3>
+                                </div>
+                                <div class="Horizontal">
+                                    <i class='bx bx-envelope'></i>
+                                    <h3 class="testimonial__description__three"><?php echo "$CompanyDetailThree->CPEmail"; ?></h3>
+                                </div>
+                            </div>
+                            <div class="areabutton2">
+                                <span class="services__button">
+                                    <button class="btn-4">ยื่นคำ<br>ร้อง</button>
+                                </span>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
@@ -307,34 +375,33 @@ require_once('css/teacher.php');
             <div class="services__modal">
                 <div class="services__modal-content">
                     <i class='bx bx-x services__modal-close'></i>
-
                     <h3 class="services__modal-title"><?php echo "Company Detail"; ?></h3>
                     <div class="line__social"></div>
-                    <p class="services__modal-description"></p>
-                    <div class="contact__container container grid">
-                        <div class="contact__content">
-                            <form action="" class="contact__form">
-                                <div class="contact__form-div">
-                                    <label for="" class="contact__form-tag">Names</label>
-                                    <input type="text" placeholder="ชื่อบริษัท" class="contact__form-input">
-                                </div>
+                    <div class="contact__content">
+                        <form action="" class="contact__form">
+                            <div class="contact__form-div1">
+                                <label for="" class="contact__form-tag2">Names</label>
+                                <input type="text" placeholder="ชื่อบริษัท" class="contact__form-input">
+                            </div>
 
-                                <div class="contact__form-div">
-                                    <label for="" class="contact__form-tag">Address</label>
-                                    <input type="email" placeholder="ที่อยู่บริษัท" class="contact__form-input">
-                                </div>
+                            <div class="contact__form-div1">
+                                <label for="" class="contact__form-tag2">Address</label>
+                                <input type="text" placeholder="ที่อยู่บริษัท" class="contact__form-input">
+                            </div>
 
-                                <div class="contact__form-div">
-                                    <label for="" class="contact__form-tag">Telephone</label>
-                                    <input type="email" placeholder="เบอร์โทรบริษัท" class="contact__form-input">
-                                </div>
-                                <div class="contact__form-div">
-                                    <label for="" class="contact__form-tag">Email</label>
-                                    <input type="email" placeholder="อีเมลล์บริษัท" class="contact__form-input">
-                                </div>
-                                <button class="button">Submit</button>
-                            </form>
-                        </div>
+                            <div class="contact__form-div1">
+                                <label for="" class="contact__form-tag2">Telephone</label>
+                                <input type="text" placeholder="เบอร์โทรบริษัท" class="contact__form-input">
+                            </div>
+                            <div class="contact__form-div1">
+                                <label for="" class="contact__form-tag2">Email</label>
+                                <input type="text" placeholder="อีเมลล์บริษัท" class="contact__form-input">
+                            </div>
+                            <div class="areabutton">
+                                <button class="button1">Submit</button>
+                            </div>
+                            
+                        </form>
                     </div>
 
                 </div>

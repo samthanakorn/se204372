@@ -27,13 +27,15 @@ if(isset($_POST['username'])){
             require_once("models/InformationDetail.php");
             require_once("models/Announcement.php");
             require_once("models/Petition.php");
-            require_once("models/Table.php");
+            require_once("models/Company.php");
             $Info = InformationDetail::get($uname);
             $AnnouncementlistOne = Announcement::get(0, 1);
             $AnnouncementlistTwo = Announcement::get(1, 1);
             $AnnouncementlistThree = Announcement::get(2, 2);
             $ShowApproved = Petition::CheckApproved();
-            $table_list = Table::getAll();
+            $CompanyDetailOne = Company::get(0, 1);
+            $CompanyDetailTwo = Company::get(0, 1);
+            $CompanyDetailThree = Company::get(0, 1);
             require_once('css/teacher.php');
         }
         else 

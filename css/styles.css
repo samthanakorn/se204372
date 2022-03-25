@@ -1803,3 +1803,32 @@ tr:nth-child(even){
   background-color: var(--first-color);
   margin: 0px 12px;
 }
+
+.contact__form-tag2{
+  position: absolute;
+  background-color: var(--first-color);
+  left: 1.25rem;
+  font-size: var(--smaller-font-size);
+  padding: .25rem;
+  color: var(--container-color);
+  z-index: 10;
+}
+
+.button1{
+  width: 120px;
+  text-align: center;
+  cursor: pointer;
+  display: inline-block;
+  background-color: white;
+  color: var(--first-color);
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  font-weight: var(--font-medium);
+  transition: .4s;
+}
+
+.contact__form-div1{
+  position: relative;
+  margin-bottom: 2rem;
+  height: 4rem;
+}

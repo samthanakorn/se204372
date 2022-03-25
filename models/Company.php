@@ -27,6 +27,8 @@
         public $CNTDepartment;
         
 
+        public $LimitOne;
+        public $LimitTwo;
         public function __construct ($CPID, $CPName, $CPType, $CPStatus, $CPAddress, $CPPhone, 
         $CPFax, $CPJobTitle, $CPCoordinator, $CPPosCoordinator, $CPSelectionStudent, $CPCooperative, $CPNatureOfWork, 
         $CPCompensation, $CPRoom, $CPAbilityStudent, $CPNumberPeople, $CPDate, $CPTime, $CPEmail, $CPManager, $CPPosManager, $CNTPhone, $CNTEmail, $CNTDepartment) {
@@ -57,10 +59,10 @@
             $this->CNTDepartment = $CNTDepartment;
         }
         
-        public static function getAll($Status){
+        public static function getAll(){
             $DetailCompanylist = [];
             require("connection_connect.php");
-            $sql = "SELECT * FROM Company Where company_status = $Status ORDER BY id_company";
+            $sql = "SELECT * FROM Company Where company_status = 1 ORDER BY id_company";
             $result = $conn -> query($sql);
             while($my_row = $result->fetch_assoc())
             {
@@ -95,6 +97,45 @@
             }
             require("connection_close.php");
             return $DetailCompanylist;
+        }
+
+        public static function get($LimitOne, $LimitTwo){
+            require("connection_connect.php");
+            $sql = "SELECT * FROM Company Where company_status = 1 
+            ORDER BY id_company DESC LIMIT $LimitOne, $LimitTwo";
+            $result = $conn -> query($sql);
+            $my_row = $result->fetch_assoc();
+                $CPID = $my_row['id_company'];
+                $CPName = $my_row['company_name'];
+                $CPType = $my_row['company_type'];
+                $CPStatus = $my_row['company_status'];
+                $CPAddress = $my_row['company_address'];
+                $CPPhone = $my_row['company_phone'];
+                $CPFax = $my_row['company_fax'];
+                $CPJobTitle = $my_row['company_jopTitle'];
+                $CPCoordinator = $my_row['company_coordinator'];
+                $CPPosCoordinator = $my_row['company_posCooperative'];
+                $CPSelectionStudent = $my_row['company_selectionStudent'];
+                $CPCooperative = $my_row['company_cooperative'];
+                $CPNatureOfWork = $my_row['company_natureOfWork'];
+                $CPCompensation = $my_row['company_compensation'];
+                $CPRoom = $my_row['company_room'];
+                $CPAbilityStudent = $my_row['company_abilityStudent'];
+                $CPNumberPeople = $my_row['company_numPeople'];
+                $CPDate = $my_row['company_date'];
+                $CPTime = $my_row['company_time'];
+                $CPEmail = $my_row['company_email'];
+                $CPManager = $my_row['company_manager'];
+                $CPPosManager = $my_row['company_posManager'];
+                $CNTPhone = $my_row['coordinator_phone'];
+                $CNTEmail = $my_row['coordinator_email'];
+                $CNTDepartment = $my_row['coordinator_department'];
+               
+            
+            require("connection_close.php");
+            return new Company($CPID, $CPName, $CPType, $CPStatus, $CPAddress, $CPPhone, 
+            $CPFax, $CPJobTitle, $CPCoordinator,$CPPosCoordinator, $CPSelectionStudent, $CPCooperative, $CPNatureOfWork, 
+            $CPCompensation, $CPRoom, $CPAbilityStudent, $CPNumberPeople, $CPDate, $CPTime, $CPEmail, $CPManager, $CPPosManager, $CNTPhone, $CNTEmail, $CNTDepartment);
         }
 
         public static function addCompany($CPID, $CPName, $CPType, $CPStatus, $CPAddress, $CPPhone, 
@@ -161,15 +202,14 @@
         $CPCompensation, $CPRoom, $CPAbilityStudent, $CPNumberPeople, $CPEmail, $CPManager, $CPPosManager, $CNTPhone, $CNTEmail, $CNTDepartment){
             require("connection_connect.php");
             $sql = "UPDATE Company
-            SET dlog_date = '$CPName', dlog_colour = '$CPType', dlog_illness = '$CPStatus',  hi_id = '$CPAddress', dlog_date = '$CPPhone', 
-            dlog_colour = '$CPFax', dlog_illness = '$CPJobTitle',  hi_id = '$CPCoordinator', dlog_date = '$CPPosCoordinator', dlog_colour = '$CPSelectionStudent', 
-            dlog_illness = '$CPCooperative',  hi_id = '$CPNatureOfWork', dlog_date = '$CPCompensation', dlog_colour = '$CPRoom', dlog_illness = '$CPAbilityStudent',
-            hi_id = '$CPNumberPeople'
-            WHERE dlog_id = '$CPID'";
+            SET company_name = '$CPName', company_type = '$CPType', company_status = '$CPStatus',  company_address = '$CPAddress', company_phone = '$CPPhone', 
+            company_fax = '$CPFax', company_jopTitle = '$CPJobTitle',  company_coordinator = '$CPCoordinator', company_posCooperative = '$CPPosCoordinator', company_selectionStudent = '$CPSelectionStudent', 
+            company_cooperative = '$CPCooperative',  company_natureOfWork = '$CPNatureOfWork', company_compensation = '$CPCompensation', company_room = '$CPRoom', company_abilityStudent = '$CPAbilityStudent',
+            company_numPeople = '$CPNumberPeople', company_email = '$CPEmail', company_manager = '$CPManager', company_posManager = '$CPPosManager', coordinator_phone = '$CNTPhone', coordinator_email = '$CNTEmail', coordinator_department = '$CNTDepartment'
+            WHERE id_company = '$CPID'";
             $result = $conn -> query($sql);
             require("connection_close.php");
             return "Update SUCCESS!";
         }
         
     }
-    ?>
