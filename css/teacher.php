@@ -381,21 +381,21 @@ require_once('css/teacher.php');
                         <form action="" class="contact__form">
                             <div class="contact__form-div1">
                                 <label for="" class="contact__form-tag2">Names</label>
-                                <input type="text" placeholder="ชื่อบริษัท" class="contact__form-input">
+                                <input type="text" placeholder="<?php echo "$CompanyDetailThree->CPName"; ?>" class="contact__form-input">
                             </div>
 
                             <div class="contact__form-div1">
                                 <label for="" class="contact__form-tag2">Address</label>
-                                <input type="text" placeholder="ที่อยู่บริษัท" class="contact__form-input">
+                                <input type="text" placeholder="<?php echo "$CompanyDetailThree->CPAddress"; ?>" class="contact__form-input">
                             </div>
 
                             <div class="contact__form-div1">
                                 <label for="" class="contact__form-tag2">Telephone</label>
-                                <input type="text" placeholder="เบอร์โทรบริษัท" class="contact__form-input">
+                                <input type="text" placeholder="<?php echo "$CompanyDetailThree->CPPhone"; ?>" class="contact__form-input">
                             </div>
                             <div class="contact__form-div1">
                                 <label for="" class="contact__form-tag2">Email</label>
-                                <input type="text" placeholder="อีเมลล์บริษัท" class="contact__form-input">
+                                <input type="text" placeholder="<?php echo "$CompanyDetailThree->CPEmail"; ?>" class="contact__form-input">
                             </div>
                             <div class="areabutton">
                                 <button class="button1">Submit</button>
@@ -452,6 +452,7 @@ require_once('css/teacher.php');
                         </a>
                     </div>
                 </div>
+                <a href="TableShow.php">Go</a>
             </div>
             </div>
         </section>

@@ -142,7 +142,7 @@ if(isset($_POST['username'])){
                     <div class="contact__info">
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">ชื่อบริษัท</label>
-                            <input type="text" name="company_name" placeholder="กรอกชื่อบริษัทของคุณ" class="contact__form-input">
+                            <input type="text" name="company_name" placeholder="กรอกชื่อบริษัทของคุณ" class="contact__form-input" required>
                         </div>
                     </div>
                 </div>
@@ -155,17 +155,17 @@ if(isset($_POST['username'])){
                     <div class="contact__form">
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">ประเภทบริษัท</label>
-                            <input type="text" name="company_type" placeholder="กรอกประเภทบริษัทของคุณ" class="contact__form-input">
+                            <input type="text" name="company_type" placeholder="กรอกประเภทบริษัทของคุณ" class="contact__form-input" required>
                         </div>
 
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">เบอร์โทรศัพท์ ของสถานประกอบการ/หน่วยงาน</label>
-                            <input type="text" name="company_phone" placeholder="กรอกเบอร์โทรศัพท์ ของสถานประกอบการ/หน่วยงาน" class="contact__form-input">
+                            <input type="text" name="company_phone" placeholder="กรอกเบอร์โทรศัพท์ ของสถานประกอบการ/หน่วยงาน" class="contact__form-input" required>
                         </div>
 
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">อีเมล (E-mail) ของสถานประกอบการ/หน่วยงาน</label>
-                            <input type="text" name="company_manager" placeholder="กรอกอีเมล ของสถานประกอบการ/หน่วยงาน" class="contact__form-input">
+                            <input type="text" name="company_manager" placeholder="กรอกอีเมล ของสถานประกอบการ/หน่วยงาน" class="contact__form-input" required>
                         </div>
 
 
@@ -179,12 +179,12 @@ if(isset($_POST['username'])){
 
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">ที่อยู่ ของสถานประกอบการ/หน่วยงาน</label>
-                            <input type="text" name="company_address" placeholder="กรอกที่อยู่ ของสถานประกอบการ/หน่วยงาน" class="contact__form-input">
+                            <input type="text" name="company_address" placeholder="กรอกที่อยู่ ของสถานประกอบการ/หน่วยงาน" class="contact__form-input" required>
                         </div>
 
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">เบอร์โทรสาร ของสถานประกอบการ/หน่วยงาน</label>
-                            <input type="text" name="company_fax" placeholder="กรอกเบอร์โทรสาร ของสถานประกอบการ/หน่วยงาน" class="contact__form-input">
+                            <input type="text" name="company_fax" placeholder="กรอกเบอร์โทรสาร ของสถานประกอบการ/หน่วยงาน" class="contact__form-input" required>
                         </div>
 
                     </form>
@@ -204,7 +204,7 @@ if(isset($_POST['username'])){
                     <div class="contact__info">
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">ชื่อผู้จัดการ สถานประกอบการ/หน่วยงาน</label>
-                            <input type="text" name="company_email" placeholder="กรอกชื่อผู้จัดการ สถานประกอบการ/หัวหน้าหน่วยงาน" class="contact__form-input">
+                            <input type="text" name="company_email" placeholder="กรอกชื่อผู้จัดการ สถานประกอบการ/หัวหน้าหน่วยงาน" class="contact__form-input" required>
                         </div>
                     </div>
                 </div>
@@ -218,17 +218,17 @@ if(isset($_POST['username'])){
                     <div class="contact__form">
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">ตำแหน่งงาน ของผู้จัดการ/หัวหน้าหน่วยงาน</label>
-                            <input type="text" name="company_posManager" placeholder="กรอกตำแหน่งงาน ของผู้จัดการ/หัวหน้าหน่วยงาน" class="contact__form-input">
+                            <input type="text" name="company_posManager" placeholder="กรอกตำแหน่งงาน ของผู้จัดการ/หัวหน้าหน่วยงาน" class="contact__form-input" required>
                         </div>
 
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">ตำแหน่งของผู้ประสานงาน</label>
-                            <input type="text" name="company_posCoordinator" placeholder="ตำแหน่งของผู้ประสานงาน" class="contact__form-input">
+                            <input type="text" name="company_posCoordinator" placeholder="ตำแหน่งของผู้ประสานงาน" class="contact__form-input" required>
                         </div>
 
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">เบอร์โทรศัพท์ของผู้ประสานงาน</label>
-                            <input type="text" name="coordinator_phone" placeholder="กรอกเบอร์โทรศัพท์ของผู้ประสานงาน" class="contact__form-input">
+                            <input type="text" name="coordinator_phone" placeholder="กรอกเบอร์โทรศัพท์ของผู้ประสานงาน" class="contact__form-input" required>
                         </div>
 
 
@@ -242,17 +242,17 @@ if(isset($_POST['username'])){
 
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">ชื่อผู้ประสานงาน ของสถานประกอบการ/หน่วยงาน</label>
-                            <input type="text" name="company_coordinator" placeholder="กรอกชื่อผู้ประสานงาน ของสถานประกอบการ/หน่วยงาน" class="contact__form-input">
+                            <input type="text" name="company_coordinator" placeholder="กรอกชื่อผู้ประสานงาน ของสถานประกอบการ/หน่วยงาน" class="contact__form-input" required>
                         </div>
 
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">แผนก/ฝ่าย ของผู้ประสานงาน</label>
-                            <input type="text" name="company_department" placeholder="กรอกแผนก/ฝ่าย ของผู้ประสานงาน" class="contact__form-input">
+                            <input type="text" name="company_department" placeholder="กรอกแผนก/ฝ่าย ของผู้ประสานงาน" class="contact__form-input" required>
                         </div>
 
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">อีเมล (E-mail) ของผู้ประสานงาน</label>
-                            <input type="text" name="coordinator_email" placeholder="กรอกอีเมล (E-mail) ของผู้ประสานงาน" class="contact__form-input">
+                            <input type="text" name="coordinator_email" placeholder="กรอกอีเมล (E-mail) ของผู้ประสานงาน" class="contact__form-input" required>
                         </div>
 
 
@@ -265,7 +265,7 @@ if(isset($_POST['username'])){
                     <div class="contact__info">
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">ฝ่าย/แผนก ที่นิสิตฝึกงาน/สหกิจศึกษา</label>
-                            <input type="text" name="company_jopTitle " placeholder="กรอกฝ่าย/แผนก ที่นิสิตฝึกงาน/สหกิจศึกษา" class="contact__form-input">
+                            <input type="text" name="company_jopTitle " placeholder="กรอกฝ่าย/แผนก ที่นิสิตฝึกงาน/สหกิจศึกษา" class="contact__form-input" required>
                         </div>
                     </div>
                 </div>
@@ -278,12 +278,12 @@ if(isset($_POST['username'])){
                     <div class="contact__form">
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">ตำแหน่งงานที่ต้องการรับนิสิตฝึกงาน/สหกิจศึกษา</label>
-                            <input type="text" name="company_posCooperative" placeholder="กรอกตำแหน่งงานที่ต้องการรับนิสิตฝึกงาน/สหกิจศึกษา" class="contact__form-input">
+                            <input type="text" name="company_posCooperative" placeholder="กรอกตำแหน่งงานที่ต้องการรับนิสิตฝึกงาน/สหกิจศึกษา" class="contact__form-input" required>
                         </div>
 
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">จำนวน (คน)</label>
-                            <input type="text" name="company_numPeople" placeholder="กรอกกรอกจำนวน (คน)" class="contact__form-input">
+                            <input type="text" name="company_numPeople" placeholder="กรอกกรอกจำนวน (คน)" class="contact__form-input" required>
                         </div>
 
 
@@ -297,12 +297,12 @@ if(isset($_POST['username'])){
 
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">ลักษณะงานที่นิสิตต้องปฏิบัติ (Job Description)</label>
-                            <input type="text" name="company_natureOfWork" placeholder="กรอกลักษณะงานที่นิสิตต้องปฏิบัติ " class="contact__form-input">
+                            <input type="text" name="company_natureOfWork" placeholder="กรอกลักษณะงานที่นิสิตต้องปฏิบัติ " class="contact__form-input" required>
                         </div>
 
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">ความสามารถทางวิชาการหรือทักษะที่นิสิตควรมี</label>
-                            <input type="text" name="company_selectionStudent" placeholder="กรอกความสามารถทางวิชาการหรือทักษะที่นิสิตควรมี" class="contact__form-input">
+                            <input type="text" name="company_selectionStudent" placeholder="กรอกความสามารถทางวิชาการหรือทักษะที่นิสิตควรมี" class="contact__form-input" required>
                         </div>
 
                     </form>
@@ -330,11 +330,11 @@ if(isset($_POST['username'])){
                     <div class="contact__info">
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">จำนวนค่าตอบแทน (บาท/วัน หรือ บาท/เดือน)</label>
-                            <input type="text" name="company_compensation " placeholder="กรอกจำนวนค่าตอบแทนา" class="contact__form-input">
+                            <input type="text" name="company_compensation " placeholder="กรอกจำนวนค่าตอบแทนา" class="contact__form-input" required>
                         </div>
                         <div class="contact__form-div">
                             <label for="" class="contact__form-tag">สวัสดิการอื่นๆ ถ้ามี (เช่น อาหาร รถรับส่ง)</label>
-                            <input type="text" name="company_room " placeholder="กรอกสวัสดิการ" class="contact__form-input">
+                            <input type="text" name="company_room " placeholder="กรอกสวัสดิการ" class="contact__form-input" required>
                         </div>
                     </div>
                 </div>

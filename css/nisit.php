@@ -258,7 +258,7 @@ include 'filesLogic.php';
                         </a>
                     </div>
 
-                    <a href="TableShow.php">Go</a>
+                    
 
                     <!--<form action="#" method="POST">
                         <h3>Upload Files</h3>
