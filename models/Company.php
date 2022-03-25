@@ -19,10 +19,17 @@
         public $CPNumberPeople;
         public $CPDate;
         public $CPTime;
+        public $CPEmail;
+        public $CPManager;
+        public $CPPosManager;
+        public $CNTPhone;
+        public $CNTEmail;
+        public $CNTDepartment;
+        
 
         public function __construct ($CPID, $CPName, $CPType, $CPStatus, $CPAddress, $CPPhone, 
         $CPFax, $CPJobTitle, $CPCoordinator, $CPPosCoordinator, $CPSelectionStudent, $CPCooperative, $CPNatureOfWork, 
-        $CPCompensation, $CPRoom, $CPAbilityStudent, $CPNumberPeople, $CPDate, $CPTime) {
+        $CPCompensation, $CPRoom, $CPAbilityStudent, $CPNumberPeople, $CPDate, $CPTime, $CPEmail, $CPManager, $CPPosManager, $CNTPhone, $CNTEmail, $CNTDepartment) {
             $this->CPID = $CPID;
             $this->CPName = $CPName;
             $this->CPType = $CPType;
@@ -42,6 +49,12 @@
             $this->CPNumberPeople = $CPNumberPeople;
             $this->CPDate = $CPDate;
             $this->CPTime = $CPTime;
+            $this->CPEmail = $CPEmail;
+            $this->CPManager = $CPManager;
+            $this->CPPosManager = $CPPosManager;
+            $this->CNTPhone = $CNTPhone;
+            $this->CNTEmail = $CNTEmail;
+            $this->CNTDepartment = $CNTDepartment;
         }
         
         public static function getAll($Status){
@@ -70,9 +83,15 @@
                 $CPNumberPeople = $my_row['company_numPeople'];
                 $CPDate = $my_row['company_date'];
                 $CPTime = $my_row['company_time'];
+                $CPEmail = $my_row['company_email'];
+                $CPManager = $my_row['company_manager'];
+                $CPPosManager = $my_row['company_posManager'];
+                $CNTPhone = $my_row['coordinator_phone'];
+                $CNTEmail = $my_row['coordinator_email'];
+                $CNTDepartment = $my_row['coordinator_department'];
                 $DetailCompanylist[] = new Company($CPID, $CPName, $CPType, $CPStatus, $CPAddress, $CPPhone, 
                                              $CPFax, $CPJobTitle, $CPCoordinator,$CPPosCoordinator, $CPSelectionStudent, $CPCooperative, $CPNatureOfWork, 
-                                             $CPCompensation, $CPRoom, $CPAbilityStudent, $CPNumberPeople, $CPDate, $CPTime);
+                                             $CPCompensation, $CPRoom, $CPAbilityStudent, $CPNumberPeople, $CPDate, $CPTime, $CPEmail, $CPManager, $CPPosManager, $CNTPhone, $CNTEmail, $CNTDepartment);
             }
             require("connection_close.php");
             return $DetailCompanylist;
@@ -80,14 +99,14 @@
 
         public static function addCompany($CPID, $CPName, $CPType, $CPStatus, $CPAddress, $CPPhone, 
         $CPFax, $CPJobTitle, $CPCoordinator,$CPPosCoordinator, $CPSelectionStudent, $CPCooperative, $CPNatureOfWork, 
-        $CPCompensation, $CPRoom, $CPAbilityStudent, $CPNumberPeople, $CPDate, $CPTime){
+        $CPCompensation, $CPRoom, $CPAbilityStudent, $CPNumberPeople, $CPDate, $CPTime, $CPEmail, $CPManager, $CPPosManager, $CNTPhone, $CNTEmail, $CNTDepartment){
             require("connection_connect.php");
             $sql = "INSERT INTO Company(id_company, company_name, company_type, company_status, company_address,
             company_phone, company_fax, company_jopTitle, company_coordinator, company_posCooperative,
             company_selectionStudent, company_cooperative, company_natureOfWork, company_compensation, company_room,
-            company_abilityStudent, company_numPeople, company_date, company_time)
+            company_abilityStudent, company_numPeople, company_date, company_time, company_email, company_manager, company_posManager, coordinator_phone, coordinator_email, coordinator_department)
             VALUES('$CPID', '$CPName', '$CPType', '$CPStatus', '$CPAddress','$CPPhone', '$CPFax', '$CPJobTitle', '$CPCoordinator', '$CPPosCoordinator', 
-            '$CPSelectionStudent', '$CPCooperative', '$CPNatureOfWork', '$CPCompensation', '$CPRoom', '$CPAbilityStudent', '$CPNumberPeople', '$CPDate', '$CPTime')";
+            '$CPSelectionStudent', '$CPCooperative', '$CPNatureOfWork', '$CPCompensation', '$CPRoom', '$CPAbilityStudent', '$CPNumberPeople', '$CPDate', '$CPTime', '$CPEmail', '$CPManager', '$CPPosManager', '$CNTPhone', '$CNTEmail', '$CNTDepartment')";
             $result = $conn -> query($sql);
             require("connection_close.php");
             return "ADD SUCCESS!";
@@ -100,7 +119,8 @@
                    or company_address like '%$key%' or company_phone like '%$key%' or company_fax like '%$key%' or company_jopTitle like '%$key%' 
                    or company_coordinator like '%$key%' or company_posCooperative like '%$key%' or company_selectionStudent like '%$key%' or company_cooperative like '%$key%' 
                    or company_natureOfWork like '%$key%' or company_compensation like '%$key%' or company_room like '%$key%' or company_abilityStudent like '%$key%' 
-                   or company_numPeople like '%$key%')";
+                   or company_numPeople like '%$key%' or company_email like '%$key%' or company_manager like '%$key%' or company_posManager like '%$key%' or coordinator_phone like '%$key%' 
+                   or coordinator_email like '%$key%' or coordinator_department like '%$key%')";
             $result = $conn -> query($sql);
             while($my_row = $result->fetch_assoc())
             {
@@ -123,16 +143,22 @@
                 $CPNumberPeople = $my_row['company_numPeople'];
                 $CPDate = $my_row['company_date'];
                 $CPTime = $my_row['company_time'];
+                $CPEmail = $my_row['company_email'];
+                $CPManager = $my_row['company_manager'];
+                $CPPosManager = $my_row['company_posManager'];
+                $CNTPhone = $my_row['coordinator_phone'];
+                $CNTEmail = $my_row['coordinator_email'];
+                $CNTDepartment = $my_row['coordinator_department'];
                 $searchlist[] = new Company($CPID, $CPName, $CPType, $CPStatus, $CPAddress, $CPPhone, 
                                              $CPFax, $CPJobTitle, $CPCoordinator,$CPPosCoordinator, $CPSelectionStudent, $CPCooperative, $CPNatureOfWork, 
-                                             $CPCompensation, $CPRoom, $CPAbilityStudent, $CPNumberPeople, $CPDate, $CPTime);
+                                             $CPCompensation, $CPRoom, $CPAbilityStudent, $CPNumberPeople, $CPDate, $CPTime, $CPEmail, $CPManager, $CPPosManager, $CNTPhone, $CNTEmail, $CNTDepartment);
             }
             require("connection_close.php");
             return $searchlist;
         }
         public static function update($CPID, $CPName, $CPType, $CPStatus, $CPAddress, $CPPhone, 
         $CPFax, $CPJobTitle, $CPCoordinator,$CPPosCoordinator, $CPSelectionStudent, $CPCooperative, $CPNatureOfWork, 
-        $CPCompensation, $CPRoom, $CPAbilityStudent, $CPNumberPeople){
+        $CPCompensation, $CPRoom, $CPAbilityStudent, $CPNumberPeople, $CPEmail, $CPManager, $CPPosManager, $CNTPhone, $CNTEmail, $CNTDepartment){
             require("connection_connect.php");
             $sql = "UPDATE Company
             SET dlog_date = '$CPName', dlog_colour = '$CPType', dlog_illness = '$CPStatus',  hi_id = '$CPAddress', dlog_date = '$CPPhone', 

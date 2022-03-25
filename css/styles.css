@@ -1725,3 +1725,81 @@ tr:nth-child(even){
 .buttoncompany{
   margin-left: 60px;
 }
+
+
+
+.btn-4{
+  width: 160px;
+    color: rgb(0, 0, 0);
+    overflow: hidden;
+    background-color: white;
+    border-radius: 20px;
+}
+.btn-4:hover {
+  background-color: hsl(6, 100%, 80%);
+}
+
+.testimonial__card1{
+  background-color: var(--first-color);
+  border-radius: 1.5rem;
+  margin-bottom: 3rem;
+  height: 500px;
+  border: 2.5px solid #000000;
+}
+.testimonial__cardIn{
+  background-color: white;
+  margin-bottom: 3rem;
+  margin-top: 30px;
+  height: 100px;
+  border: 2.5px solid #000000;
+}
+.testimonial__description__two{
+  color:black;
+  font-size: var(--small-font-size);
+  text-align: left;
+}
+.testimonial__description__three{
+  font-size: var(--small-font-size);
+    margin-left: 16px;
+    text-align: center;
+}
+.testimonial__description__four{
+  font-size: var(--small-font-size);
+    text-align: left;
+}
+
+
+
+.PetitionBox{
+  height: 80px;
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin: 20px 0px;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.Horizontal{
+  display: flex;
+  flex-direction: row;
+}
+.Vertical{
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+.areabutton2{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  margin-right: 30px;
+}
+
+.VerticalLine{
+  height: 80%;
+  width: 1.75px;
+  background-color: var(--first-color);
+  margin: 0px 12px;
+}

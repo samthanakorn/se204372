@@ -93,7 +93,7 @@ require_once('css/teacher.php');
                     <a href="https://www.linkedin.com/" target="_blank" class="home__social-link">
                         <i class='bx bxl-linkedin-square'></i>
                     </a>
-                    <a href="https://github.com/" target="_blank" class="home__social-link">
+                    <a href="https://github.com/samthanakorn/se204372.git" target="_blank" class="home__social-link">
                         <i class='bx bxl-github'></i>
                     </a>
                     <a href="https://dribble.com/" target="_blank" class="home__social-link">
@@ -242,10 +242,37 @@ require_once('css/teacher.php');
                         <p class="testimonial__description">
                             Programmer, Software Engineer, Hardware Engineer
                         </p>
+                        <div class="PetitionBox">
+                            <h3 class="testimonial__description__three">ลักษณะ<br>งาน</h3>
+                            <div class="VerticalLine"></div>
+                            <h3 class="testimonial__description__four">ออกแบบหน้าตา Mobile App และ Website Page
+                                <br>ช่วยประกอบ Hardware ในส่วนของภายใน</h3>
+                        </div>
+                        <div class="Horizontal">
+                            <div class="Vertical">
+                                <div class="Horizontal">
+                                    <i class='bx bx-phone'></i>
+                                    <h3 class="testimonial__description__three">080-9703295</h3>
+                                </div>
+                                <div class="Horizontal">
+                                    <i class='bx bx-envelope'></i>
+                                    <h3 class="testimonial__description__three">Yutthana.pi@ku.th</h3>
+                                </div>
+                            </div>
+                            <div class="areabutton2">
+                                <span class="services__button">
+                                    <button class="btn-4">ยื่นคำ<br>ร้อง</button>
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="testimonial__card swiper-slide">
-                        <img src="img/testimonial1.png" alt="" class="testimonial__img">
 
+
+                    <div class="testimonial__card swiper-slide">
+                        <div class="areabutton1">
+                            <img src="img/testimonial1.png" alt="" class="testimonial__img">
+                        </div>
+                        <div class="line__social"></div>
                         <h3 class="testimonial__name">Microsoft</h3>
                         <p class="testimonial__description">
                             Programmer, Software Engineer, Hardware Engineer
@@ -253,29 +280,70 @@ require_once('css/teacher.php');
                     </div>
 
                     <div class="testimonial__card swiper-slide">
-                        <img src="img/testimonial2.png" alt="" class="testimonial__img">
-
-                        <h3 class="testimonial__name">Paula Vusy</h3>
+                        <div class="areabutton1">
+                            <img src="img/testimonial1.png" alt="" class="testimonial__img">
+                        </div>
+                        <div class="line__social"></div>
+                        <h3 class="testimonial__name">Microsoft</h3>
                         <p class="testimonial__description">
-                            A really good jop,all aspects of the project were
-                            followed step by step and with good results.
+                            Programmer, Software Engineer, Hardware Engineer
                         </p>
                     </div>
 
                     <div class="testimonial__card swiper-slide">
-                        <img src="img/testimonial3.png" alt="" class="testimonial__img">
-
-                        <h3 class="testimonial__name">Sara cill</h3>
+                        <div class="areabutton1">
+                            <img src="img/testimonial1.png" alt="" class="testimonial__img">
+                        </div>
+                        <div class="line__social"></div>
+                        <h3 class="testimonial__name">Microsoft</h3>
                         <p class="testimonial__description">
-                            A really good jop,all aspects of the project were
-                            followed step by step and with good results.
+                            Programmer, Software Engineer, Hardware Engineer
                         </p>
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
-        </section>
 
+            <div class="services__modal">
+                <div class="services__modal-content">
+                    <i class='bx bx-x services__modal-close'></i>
+
+                    <h3 class="services__modal-title"><?php echo "Company Detail"; ?></h3>
+                    <div class="line__social"></div>
+                    <p class="services__modal-description"></p>
+                    <div class="contact__container container grid">
+                        <div class="contact__content">
+                            <form action="" class="contact__form">
+                                <div class="contact__form-div">
+                                    <label for="" class="contact__form-tag">Names</label>
+                                    <input type="text" placeholder="ชื่อบริษัท" class="contact__form-input">
+                                </div>
+
+                                <div class="contact__form-div">
+                                    <label for="" class="contact__form-tag">Address</label>
+                                    <input type="email" placeholder="ที่อยู่บริษัท" class="contact__form-input">
+                                </div>
+
+                                <div class="contact__form-div">
+                                    <label for="" class="contact__form-tag">Telephone</label>
+                                    <input type="email" placeholder="เบอร์โทรบริษัท" class="contact__form-input">
+                                </div>
+                                <div class="contact__form-div">
+                                    <label for="" class="contact__form-tag">Email</label>
+                                    <input type="email" placeholder="อีเมลล์บริษัท" class="contact__form-input">
+                                </div>
+                                <button class="button">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+        </section>
 
         <section class="about section" id="Profile">
             <h2 class="section__title"><?php echo "$Info->Name $Info->LastName"; ?></h2>
@@ -542,7 +610,7 @@ require_once('css/teacher.php');
             <div class="line__social"></div>
 
             <ul class="footer__social">
-                <a href="https://www.facebook.com" target="_blank" class="footer__social-link">
+                <a href="https://teams.microsoft.com/l/channel/19%3a3996cc80c9dc4006a80079d5ebe970f1%40thread.tacv2/SE%2520DARN%2520TURN?groupId=b0d067d6-8d90-4b7a-ad0d-ec8bf19a5215&tenantId=8c1832ea-a96d-413e-bf7d-9fe4d608e00b" target="_blank" class="footer__social-link">
                     <i class='bx bxl-microsoft-teams'></i>
                 </a>
                 <a href="https://www.instagram.com/" target="_blank" class="footer__social-link">
